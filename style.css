@@ -12,13 +12,18 @@ body {
   background-color: #eee;
   /** background-image: linear-gradient(60deg, #0e3768 0%, #b0d8e3 100%); **/
 background-image: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(0, 0, 0, 0.4)
-    ),
-    url();
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 1) 96%),
+ /**https://img.ecmaps.de/remote/.jpg?url=https%3A%2F%2Fdam.destination.one%2F615547%2F7baeb745aad5fc4c3428bb081ebb5888ad46f3e8a48fd95405246f2a169bbec4%2Fkulturzentrum-alte-schule-stotel.jpg&scale=both&mode=crop&quality=90&width=1200&height=630**/ /**https://i.pinimg.com/originals/a1/6f/b2/a16fb2d61c71cfcfd495f0d85e9caf2d.png**/ 
+/**https://i.pinimg.com/originals/3b/39/1a/3b391aa210e495ac1c5a10fc9dcc1568.jpg**/ 
+/**https://previews.123rf.com/images/jozefklopacka/jozefklopacka1604/jozefklopacka160400020/54742015-vieja-nota-de-la-m%C3%BAsica-y-el-efecto-de-la-vendimia-fondo-musical.jpg**/  /**https://setersjenten.files.wordpress.com/2012/06/shtmsc002.jpg**/
+  /**https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png**/
+  /**https://c1.wallpaperflare.com/preview/594/292/847/music-notenblatt-black-white.jpg**/ 
+	url(https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
   
   
   font-family: 'Lato', sans-serif;
@@ -374,6 +379,22 @@ nav > ul {
 .contact-details:hover {
   font-size: 1.6rem;
 }
+
+
+@media (max-width: 700px) {
+  .contact-details {
+  font-size: 1.2rem;
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+  transition: 0.3s ease-out;
+  border: transparent;
+  color: #ff5757;
+}
+
+.contact-details:hover {
+  font-size: 1.3rem;
+}
+}
+
 
 footer {
   margin-top: 0px;
