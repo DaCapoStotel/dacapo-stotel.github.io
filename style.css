@@ -61,7 +61,7 @@ a {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  box-shadow: 8px 0 10px -10px black, -8px 0 10px -10px black;
+  box-shadow: 6px 0 10px -10px black, -6px 0 10px -10px black;
 }
 
 .btn {
@@ -190,7 +190,7 @@ nav > ul {
 #ueber-uns-img {
   max-width: 100%;
   max-height: 100%;
-  box-shadow: /**0 9px 0px 0px #eee, 0 -0px 0px 0px #f0f1f5,**/ 8px 0 10px -10px black, -8px 0 10px -10px black;
+  box-shadow: /**0 9px 0px 0px #eee, 0 -0px 0px 0px #f0f1f5,**/ 6px 0 10px -10px black, -6px 0 10px -10px black;
   
 }
 
