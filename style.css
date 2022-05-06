@@ -18,8 +18,7 @@ background-image: linear-gradient(180deg,
 /**https://i.pinimg.com/originals/3b/39/1a/3b391aa210e495ac1c5a10fc9dcc1568.jpg**/ 
 /**https://previews.123rf.com/images/jozefklopacka/jozefklopacka1604/jozefklopacka160400020/54742015-vieja-nota-de-la-m%C3%BAsica-y-el-efecto-de-la-vendimia-fondo-musical.jpg**/  /**https://setersjenten.files.wordpress.com/2012/06/shtmsc002.jpg**/
   /**https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png**/
-  /**https://c1.wallpaperflare.com/preview/594/292/847/music-notenblatt-black-white.jpg**/ 
-	url(https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png);
+  /**https://c1.wallpaperflare.com/preview/594/292/847/music-notenblatt-black-white.jpg**/ url(https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -62,6 +61,7 @@ a {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  box-shadow: 8px 0 10px -10px black, -8px 0 10px -10px black;
 }
 
 .btn {
@@ -190,6 +190,8 @@ nav > ul {
 #ueber-uns-img {
   max-width: 100%;
   max-height: 100%;
+  box-shadow: /**0 9px 0px 0px #eee, 0 -0px 0px 0px #f0f1f5,**/ 8px 0 10px -10px black, -8px 0 10px -10px black;
+  
 }
 
 @media (max-width: 650px) {
