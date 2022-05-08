@@ -76,6 +76,7 @@ a {
   cursor: pointer;
 }
 
+
 .grid {
   display: flex;
 }
@@ -209,8 +210,12 @@ nav > ul {
             display: block;
             margin-bottom: .5em;
         }
+.brverysmall {
+            display: block;
+            margin-bottom: .2em;
+        }
 
-#features .icon {
+/**#features .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,13 +228,13 @@ nav > ul {
   #features .icon {
     display: none;
   }
-}
+}**/
 
 #features .desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 125px;
+  height: 100%;
   width: 80vw;
   padding: 10px;
 }
@@ -238,8 +243,8 @@ nav > ul {
   #features .desc {
     width: 100%;
     text-align: center;
-    padding: 0;
-    height: 150px;
+    padding: 10px;
+    height: 100%;
   }
 }
 
@@ -249,7 +254,7 @@ nav > ul {
   }
 }
 
-#how-it-works {
+/**#how-it-works {
   margin-top: 50px;
   display: flex;
   justify-content: center;
@@ -258,7 +263,7 @@ nav > ul {
 #how-it-works > iframe {
   max-width: 560px;
   width: 100%;
-}
+}**/
 
 #pricing {
   padding-top: 60px;
@@ -276,13 +281,13 @@ nav > ul {
   width: calc(100% / 0.66);
   margin: 10px;
   border: 1px solid #555555;
-  border-radius: 3px;
+  border-radius: 1px;
 }
 
 /**Einschub**/
 
 #tenor {
-  border-radius: 0px;
+  border-radius: 1px;
 }
 
 #tenor > iframe {
@@ -303,11 +308,12 @@ nav > ul {
   padding: 15px 0;
   width: 100%;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 70;
+  font-size: 1.5rem;
 }
 
 .product > h2 {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .product > ol {
@@ -325,8 +331,10 @@ nav > ul {
   #tenor {
     max-width: 600px;
     width: 100%;
+    padding: 10px;
     margin: 0 auto;
     margin-bottom: 10px;
+    border: 0px solid #555555;
   }
   #valve {
     max-width: 300px;
@@ -335,6 +343,28 @@ nav > ul {
     margin-bottom: 10px;
      margin-top: 20px;
   }
+ 
+  .product > .level {
+  background-color: #ddd;
+  color: black;
+  padding: 10px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 70;
+  font-size: 1.5rem;
+}
+
+.product > h2 {
+  margin-top: 10px;
+}
+
+.product > ol {
+  margin: 5px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
 }
 
 /* Contact section */
