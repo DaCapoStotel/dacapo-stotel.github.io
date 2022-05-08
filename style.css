@@ -18,7 +18,7 @@ background-image: linear-gradient(180deg,
 /**https://i.pinimg.com/originals/3b/39/1a/3b391aa210e495ac1c5a10fc9dcc1568.jpg**/ 
 /**https://previews.123rf.com/images/jozefklopacka/jozefklopacka1604/jozefklopacka160400020/54742015-vieja-nota-de-la-m%C3%BAsica-y-el-efecto-de-la-vendimia-fondo-musical.jpg**/  /**https://setersjenten.files.wordpress.com/2012/06/shtmsc002.jpg**/
   /**https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png**/
-  /**https://c1.wallpaperflare.com/preview/594/292/847/music-notenblatt-black-white.jpg**/ url(https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png);
+  /**https://c1.wallpaperflare.com/preview/594/292/847/music-notenblatt-black-white.jpg**/ url(https://lh3.googleusercontent.com/BFOnFs0iLhXxYtKbMRIjShKpHpGs4kHAR9t7kswKtKMAYnIiyiWZtva8KF7QpcMjSMnsv3pOKDASk8OdJZ0MMRKQzD23fW-NJYeCJ6z-mgvztpoEgzduUn7xuBIiB7ZnKFuxpYQ80RReq6p38fOr1l3YdgPkjbpkPULTPvkeTPHonk5Mk-CeXp_ZajgQJKMxgnFYqAUYLg2CLa9tPsfL9PyppOi9sX3D_QJcb-EDeGyUExvSIQC7CfZfPVwcmGk7559fe7pLkTUjjnYI_dwEIlvqp2YkDUBsMf1FsCbN7bVDtLfKA7-Awxw7tYWskRIK3lQX0kn1_hFAT58LFZxLsUr8EB9qGsbzkk6J80daradA2Kt5zI2w-yJ1z45UKLKiojtDPBV3cPxd9QSwZqKXkBBbRasppc7GIDtushvQKEg5CNpL6JCfucDQTkwiPZnLkHbDgZ5aAZhd2NWxPjIkldiUXkF67TFJ50Ez5Jzxx3igp1t0YCW8kDelvrn6_MJbUyu_t6wqLYxgQspnCik5Uaqeb4A-fDDZgfTDpgmHqBd6XbvuBBh-0ahoRiez5xPmWI6ehCewOeY6xV1rhrMIbsXXAt6ajcWFSWBxqod_xYlg8DyN2tfOHUsgqOBMOH9erLSOp2gGXEK6z6NqPqNCUzq0LvHp_GH_7HnluxAIUfBa82Fj2Cx1vl3gHBh6guRoSdNycKEutvu5HwrHSCAQtaHpty_ASw8U7Ey7bMbDIE0QYiRZLd21zwZjjUJg2J8xxKVdIGCbGBE1fHS2HPQ0hblOaFpVs_CYB20Q=s880-no?authuser=0);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -178,7 +178,7 @@ nav > ul {
 /** über uns **/
 
 
-#hero {
+#bildvonuns {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,12 +196,12 @@ nav > ul {
 }
 
 @media (max-width: 650px) {
-  #hero {
+  #bildvonuns {
     margin-top: 120px;
   }
 }
 
-#features {
+#about {
   margin-top: 0px;
   background: #eee;
 }
@@ -215,7 +215,7 @@ nav > ul {
             margin-bottom: .2em;
         }
 
-/**#features .icon {
+/**#about .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,12 +225,12 @@ nav > ul {
 }
 
 @media (max-width: 550px) {
-  #features .icon {
+  #about .icon {
     display: none;
   }
 }**/
 
-#features .desc {
+#about .desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -240,7 +240,7 @@ nav > ul {
 }
 
 @media (max-width: 550px) {
-  #features .desc {
+  #about .desc {
     width: 100%;
     text-align: center;
     padding: 10px;
@@ -249,7 +249,7 @@ nav > ul {
 }
 
 @media (max-width: 650px) {
-  #features {
+  #about {
     margin-top: 0;
   }
 }
@@ -265,7 +265,7 @@ nav > ul {
   width: 100%;
 }**/
 
-#pricing {
+#wowann {
   padding-top: 60px;
   display: flex;
   flex-direction: row;
@@ -273,7 +273,7 @@ nav > ul {
   background: #eee;
 }
 
-.product {
+.kachel {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -286,23 +286,23 @@ nav > ul {
 
 /**Einschub**/
 
-#tenor {
+#wo {
   border-radius: 1px;
 }
 
-#tenor > iframe {
+#wo > iframe {
   max-width: 600px;
   width: 100%;
 }
 
-#valve {
+#wann {
   max-width: 560px;
  width: 100%;
   background-color: #eee;
 }
 /**Einschub ende**/
 
-.product > .level {
+.kachel > .level {
   background-color: #ddd;
   color: black;
   padding: 15px 0;
@@ -312,23 +312,23 @@ nav > ul {
   font-size: 1.5rem;
 }
 
-.product > h2 {
+.kachel > h2 {
   margin-top: 20px;
 }
 
-.product > ol {
+.kachel > ol {
   margin: 15px 0;
 }
 
-.product > ol > li {
+.kachel > ol > li {
   padding: 5px 0;
 }
 
 @media (max-width: 800px) {
-  #pricing {
+  #wowann {
     flex-direction: column;
   }
-  #tenor {
+  #wo {
     max-width: 600px;
     width: 100%;
     padding: 10px;
@@ -336,7 +336,7 @@ nav > ul {
     margin-bottom: 10px;
     border: 0px solid #555555;
   }
-  #valve {
+  #wann {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
@@ -344,7 +344,7 @@ nav > ul {
      margin-top: 20px;
   }
  
-  .product > .level {
+  .kachel > .level {
   background-color: #ddd;
   color: black;
   padding: 10px 0;
@@ -354,15 +354,15 @@ nav > ul {
   font-size: 1.5rem;
 }
 
-.product > h2 {
+.kachel > h2 {
   margin-top: 10px;
 }
 
-.product > ol {
+.kachel > ol {
   margin: 5px 0;
 }
 
-.product > ol > li {
+.kachel > ol > li {
   padding: 5px 0;
 }
 }
