@@ -205,6 +205,11 @@ nav > ul {
   background: #eee;
 }
 
+.brsmall {
+            display: block;
+            margin-bottom: .5em;
+        }
+
 #features .icon {
   display: flex;
   align-items: center;
