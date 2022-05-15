@@ -225,6 +225,14 @@ nav > ul {
   justify-content: center;
 }
 
+@media (max-width: 650px) {
+#about .grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+}
+
 #about .icon {
   display: flex;
   align-items: center;
@@ -234,6 +242,12 @@ nav > ul {
 
 #about .icon > img {
   width: 200px;
+}
+
+@media (max-width: 650px) {
+#about .icon > img {
+  width: 100%; 
+  }
 }
 
 .about-section-header > h2 {
