@@ -1,0 +1,477 @@
+/** global element styling **/
+
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  /** background-image: linear-gradient(60deg, #0e3768 0%, #b0d8e3 100%); **/
+background-image: linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 1) 96%),
+ /**https://img.ecmaps.de/remote/.jpg?url=https%3A%2F%2Fdam.destination.one%2F615547%2F7baeb745aad5fc4c3428bb081ebb5888ad46f3e8a48fd95405246f2a169bbec4%2Fkulturzentrum-alte-schule-stotel.jpg&scale=both&mode=crop&quality=90&width=1200&height=630**/ /**https://i.pinimg.com/originals/a1/6f/b2/a16fb2d61c71cfcfd495f0d85e9caf2d.png**/ 
+/**https://i.pinimg.com/originals/3b/39/1a/3b391aa210e495ac1c5a10fc9dcc1568.jpg**/ 
+/**https://previews.123rf.com/images/jozefklopacka/jozefklopacka1604/jozefklopacka160400020/54742015-vieja-nota-de-la-m%C3%BAsica-y-el-efecto-de-la-vendimia-fondo-musical.jpg**/  /**https://setersjenten.files.wordpress.com/2012/06/shtmsc002.jpg**/
+  /**https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png**/
+  /**https://c1.wallpaperflare.com/preview/594/292/847/music-notenblatt-black-white.jpg**/ 
+	url(https://github.com/P4ulchen/P4ulchen.github.io/blob/main/assets/notenblatt-huhn.png?raw=true);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  
+  
+  font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 650px) {
+  body {
+  background-image: linear-gradient(60deg, #eee 0%, #eee 100%);
+}
+}
+/** 
+#f1f2f6	(241,242,246)
+#555555	(85,85,85)
+#0e3768	(14,55,104)
+#b0d8e3	(176,216,227)
+#efe897	(239,232,151)
+**/
+
+#page-wrapper {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #ff5757;
+  text-shadow: 0.5px 0.5px 0.75px #1f1f1f;
+  text-decoration: none;
+}
+
+/** global classes styling **/
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 6px 0 10px -10px black, -6px 0 10px -10px black;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+.grid {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+      -webkit-box-shadow: 0 0px 0px -0px black;
+	   -moz-box-shadow: 0 0px 0px -0px black;
+	        box-shadow: 0 0px 0px -0px black;
+  }
+}
+
+.logo {
+  width: 60vw;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+
+nav {
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+}
+
+nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #ff5757;
+}
+
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+
+/** nav import **/
+
+
+.nav-link:hover {
+  text-decoration:underline;
+}
+
+
+/** über uns **/
+
+
+#bildvonuns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /** height: 300px; **/
+  margin-top: 50px;
+}
+
+#ueber-uns-img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: /**0 9px 0px 0px #eee, 0 -0px 0px 0px #f0f1f5,**/ 6px 0 10px -10px black, -6px 0 10px -10px black;
+  
+}
+
+@media (max-width: 650px) {
+  #bildvonuns {
+    margin-top: 120px;
+  }
+}
+
+#about {
+  padding-top: 90px;
+  background: #eee;
+}
+
+.brsmall {
+            display: block;
+            margin-bottom: .5em;
+        }
+.brverysmall {
+            display: block;
+            margin-bottom: .2em;
+        }
+
+#about .grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#about .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+#about .icon > img {
+  width: 200px;
+}
+
+.about-section-header > h2 {
+  font-size: 2rem;
+  margin: 25px;
+}
+
+@media (max-width: 28.75em) {
+  .about-section-header > h2 {
+    font-size: 1.5rem; 
+  }
+}
+/**
+@media (max-width: 550px) {
+  #about .icon {
+    display: none;
+  }
+}
+**/
+#about .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 80vw;
+  padding: 10px;
+}
+
+@media (max-width: 550px) {
+  #about .desc {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  #about {
+    margin-top: 0;
+  }
+}
+
+/**#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#how-it-works > iframe {
+  max-width: 560px;
+  width: 100%;
+}**/
+
+#wowann {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #eee;
+}
+
+.kachel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 0.66);
+  margin: 10px;
+  border: 1px solid #555555;
+  border-radius: 1px;
+}
+
+/**Einschub**/
+
+#wo {
+  border-radius: 1px;
+}
+
+#wo > iframe {
+  max-width: 600px;
+  width: 100%;
+}
+
+#wann {
+  max-width: 560px;
+ width: 100%;
+  background-color: #eee;
+}
+/**Einschub ende**/
+
+.kachel > .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 70;
+  font-size: 1.5rem;
+}
+
+.kachel > h2 {
+  margin-top: 20px;
+}
+
+.kachel > ol {
+  margin: 15px 0;
+}
+
+.kachel > ol > li {
+  padding: 5px 0;
+}
+
+@media (max-width: 800px) {
+  #wowann {
+    flex-direction: column;
+  }
+  #wo {
+    max-width: 600px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 0px solid #555555;
+  }
+  #wann {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+     margin-top: 20px;
+  }
+ 
+  .kachel > .level {
+  background-color: #ddd;
+  color: black;
+  padding: 10px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 70;
+  font-size: 1.5rem;
+}
+
+.kachel > h2 {
+  margin-top: 10px;
+}
+
+.kachel > ol {
+  margin: 5px 0;
+}
+
+.kachel > ol > li {
+  padding: 5px 0;
+}
+}
+
+/* Contact section */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background: #eee;
+}
+
+.contact-section-header > h2 {
+   font-size: 2rem; 
+  }
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 1.5rem; 
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+
+}
+
+.contact-details {
+  font-size: 1.5rem;
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+  transition: 0.3s ease-out;
+  border: transparent;
+  color: #ff5757;
+}
+
+.contact-details:hover {
+  font-size: 1.6rem;
+}
+
+
+@media (max-width: 700px) {
+  .contact-details {
+  font-size: 1.2rem;
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+  transition: 0.3s ease-out;
+  border: transparent;
+  color: #ff5757;
+}
+
+.contact-details:hover {
+  font-size: 1.3rem;
+}
+}
+
+
+footer {
+  margin-top: 0px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
