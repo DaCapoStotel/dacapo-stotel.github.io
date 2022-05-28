@@ -352,14 +352,14 @@ nav > ul {
     max-width: 550px;
     width: 100%;
     /**padding: 10px;**/
-    margin: 0 auto;
+    margin: 5 auto;
     margin-bottom: 10px;
    /** border: 0px solid #555555;**/
   }
   #wann {
     max-width: 300px;
     width: 100%;
-    margin: 0 auto;
+    margin: 5 auto;
     margin-bottom: 10px;
      margin-top: 20px;
   }
