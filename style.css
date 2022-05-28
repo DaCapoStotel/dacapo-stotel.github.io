@@ -351,7 +351,7 @@ nav > ul {
   #wo {
     max-width: 600px;
     width: 100%;
-    padding: 10px;
+    /**padding: 10px;**/
     margin: 0 auto;
     margin-bottom: 10px;
     border: 0px solid #555555;
