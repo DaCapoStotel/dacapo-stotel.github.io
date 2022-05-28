@@ -349,10 +349,10 @@ nav > ul {
     flex-direction: column;
   }
   #wo {
-    max-width: 600px;
+    max-width: 550px;
     width: 100%;
     /**padding: 10px;**/
-    /**margin: 0 auto;**/
+    margin: 0 auto;
     margin-bottom: 10px;
    /** border: 0px solid #555555;**/
   }
