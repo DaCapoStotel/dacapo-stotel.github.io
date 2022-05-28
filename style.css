@@ -18,8 +18,7 @@ background-image: linear-gradient(180deg,
 /**https://i.pinimg.com/originals/3b/39/1a/3b391aa210e495ac1c5a10fc9dcc1568.jpg**/ 
 /**https://previews.123rf.com/images/jozefklopacka/jozefklopacka1604/jozefklopacka160400020/54742015-vieja-nota-de-la-m%C3%BAsica-y-el-efecto-de-la-vendimia-fondo-musical.jpg**/  /**https://setersjenten.files.wordpress.com/2012/06/shtmsc002.jpg**/
   /**https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png**/
-  /**https://c1.wallpaperflare.com/preview/594/292/847/music-notenblatt-black-white.jpg**/ 
-	url(https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/notenblatt-huhn.png?raw=true);
+  /**https://c1.wallpaperflare.com/preview/594/292/847/music-notenblatt-black-white.jpg**/ url(https://lh3.googleusercontent.com/BFOnFs0iLhXxYtKbMRIjShKpHpGs4kHAR9t7kswKtKMAYnIiyiWZtva8KF7QpcMjSMnsv3pOKDASk8OdJZ0MMRKQzD23fW-NJYeCJ6z-mgvztpoEgzduUn7xuBIiB7ZnKFuxpYQ80RReq6p38fOr1l3YdgPkjbpkPULTPvkeTPHonk5Mk-CeXp_ZajgQJKMxgnFYqAUYLg2CLa9tPsfL9PyppOi9sX3D_QJcb-EDeGyUExvSIQC7CfZfPVwcmGk7559fe7pLkTUjjnYI_dwEIlvqp2YkDUBsMf1FsCbN7bVDtLfKA7-Awxw7tYWskRIK3lQX0kn1_hFAT58LFZxLsUr8EB9qGsbzkk6J80daradA2Kt5zI2w-yJ1z45UKLKiojtDPBV3cPxd9QSwZqKXkBBbRasppc7GIDtushvQKEg5CNpL6JCfucDQTkwiPZnLkHbDgZ5aAZhd2NWxPjIkldiUXkF67TFJ50Ez5Jzxx3igp1t0YCW8kDelvrn6_MJbUyu_t6wqLYxgQspnCik5Uaqeb4A-fDDZgfTDpgmHqBd6XbvuBBh-0ahoRiez5xPmWI6ehCewOeY6xV1rhrMIbsXXAt6ajcWFSWBxqod_xYlg8DyN2tfOHUsgqOBMOH9erLSOp2gGXEK6z6NqPqNCUzq0LvHp_GH_7HnluxAIUfBa82Fj2Cx1vl3gHBh6guRoSdNycKEutvu5HwrHSCAQtaHpty_ASw8U7Ey7bMbDIE0QYiRZLd21zwZjjUJg2J8xxKVdIGCbGBE1fHS2HPQ0hblOaFpVs_CYB20Q=s880-no?authuser=0);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -54,6 +53,10 @@ a {
   color: #ff5757;
   text-shadow: 0.5px 0.5px 0.75px #1f1f1f;
   text-decoration: none;
+}
+
+a > h2 {
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
 }
 
 /** global classes styling **/
@@ -171,9 +174,10 @@ nav > ul {
   }
 }
 
-
-/** nav import **/
-
+.nav-link {
+  border-radius: 7px;
+  padding: 2px;
+}
 
 .nav-link:hover {
   text-decoration:underline;
