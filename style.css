@@ -179,10 +179,11 @@ nav > ul {
   padding: 2px;
 }
 
+/**
 .nav-link:hover {
   text-decoration:underline;
 }
-
+**/
 
 /** über uns **/
 
