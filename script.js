@@ -87,7 +87,7 @@ else if (mediaQuery.matches && scroll < 1400) {
   details.style.fontSize = '1.1rem';
   }  
 else if (/*!(mediaQuery.matches && */scroll > 1200) {
-  details.style.fontSize = '1.6rem';
+  details.style.fontSize = '1.8rem';
 }    
 else if (/*!(mediaQuery.matches &&*/ scroll < 1200) {
   details.style.fontSize = '1.4rem';
