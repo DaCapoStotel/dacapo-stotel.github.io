@@ -131,7 +131,7 @@ var observer = new IntersectionObserver(function(entries) {
   }
   }, { threshold: [1] });
 
-observer.observe(document.querySelector("#about"));
+observer.observe(document.querySelector("#ueber-uns-img"));
 
 
 var observer = new IntersectionObserver(function(entries) {
