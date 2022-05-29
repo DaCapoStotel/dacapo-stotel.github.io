@@ -87,22 +87,6 @@ else if (/*!(mediaQuery.matches &&*/ scroll < 1200) {
 
 
 
-var observer = new IntersectionObserver(function(entries) {
-	if(entries[0].isIntersecting === true){
-		    nav1.style.color = "white";
-    nav2.style.color = "#ff5757";
-    nav3.style.color = "#ff5757";
-    nav1.style.backgroundColor = "#ff5757";
-    nav2.style.backgroundColor = "white";
-    nav3.style.backgroundColor = "white";
-    nav1.style.transition = '0.8s ease-out';
-    nav2.style.transition = '0.8s ease-out';
-    nav3.style.transition = '0.8s ease-out';
-  }
-  }, { threshold: [1] });
-
-observer.observe(document.querySelector("#ueber-uns-img"));
-
 
 var observer = new IntersectionObserver(function(entries) {
   if (entries[0].isIntersecting === true){
@@ -119,6 +103,23 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: [1] });
 
 observer.observe(document.querySelector("#header"));
+
+
+var observer = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true){
+		    nav1.style.color = "white";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  }
+  }, { threshold: [1] });
+
+observer.observe(document.querySelector("#ueber-uns-img"));
 
 
 var observer = new IntersectionObserver(function(entries) {
