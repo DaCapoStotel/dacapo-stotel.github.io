@@ -114,7 +114,7 @@ var observer = new IntersectionObserver(function(entries) {
   }
 }, { threshold: [1] });
 
-observer.observe(document.querySelector("#container"));
+observer.observe(document.querySelector("#containerino"));
 
 var observer0 = new IntersectionObserver(function(entries) {
 	if(entries[0].isIntersecting === true){
@@ -128,7 +128,7 @@ var observer0 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-  }, { threshold: [1] });
+}, { threshold: [0.7] });
 
 observer0.observe(document.querySelector("#bildvonuns"));
 
@@ -144,7 +144,7 @@ var observer1 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-  }, { threshold: [1] });
+}, { threshold: [0.7] });
 
 observer1.observe(document.querySelector("#about"));
 
@@ -161,7 +161,7 @@ var observer2 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [1] });
+}, { threshold: [0.7] });
 
 observer2.observe(document.querySelector("#wowann"));
 
@@ -178,6 +178,228 @@ var observer3 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [1] });
+}, { threshold: [0.7] });
+
 
 observer3.observe(document.querySelector("#contact"));
+
+/*
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#containerino');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top <= 0 && position.bottom <= window.innerHeight) {
+		    nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#bildvonuns');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(scroll > 0 && position.top < window.innerHeight && position.bottom >= 0) {
+		    nav1.style.color = "white";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#about');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+		    nav1.style.color = "white";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#wowann');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+		    nav1.style.color = "#ff5757";
+    nav2.style.color = "white";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "#ff5757";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#contact');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+		    nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "white";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "#ff5757";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+*/
+
+
+
+
+
+/*
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#containerino');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+		    nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#bildvonuns');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(scroll > 0 && position.top < window.innerHeight && position.bottom >= 0) {
+    nav1.style.color = "white";
+    nav1.style.backgroundColor = "#ff5757";
+    nav1.style.transition = '0.8s ease-out';
+	}
+  else {
+    nav1.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';    
+  }
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#about');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+    nav2.style.color = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav2.style.transition = '0.8s ease-out'; 
+    nav3.style.color = "#ff5757";
+    nav3.style.backgroundColor = "white";
+    nav3.style.transition = '0.8s ease-out'; 
+	}
+  
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+    nav1.style.color = "white";
+    nav1.style.backgroundColor = "#ff5757";
+    nav1.style.transition = '0.8s ease-out';
+	}
+  else {
+    nav1.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';    
+  }
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#wowann');
+	var position = element.getBoundingClientRect();
+
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+    nav1.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav3.style.color = "#ff5757";
+    nav3.style.backgroundColor = "white";
+    nav3.style.transition = '0.8s ease-out'; 
+	}
+  
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+    nav2.style.color = "white";
+    nav2.style.backgroundColor = "#ff5757";
+    nav2.style.transition = '0.8s ease-out';
+	}
+  else {
+    nav2.style.color = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav2.style.transition = '0.8s ease-out';    
+  }
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#contact');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+    nav2.style.color = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav2.style.transition = '0.8s ease-out'; 
+    nav1.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out'; 
+	}
+  
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+    nav3.style.color = "white";
+    nav3.style.backgroundColor = "#ff5757";
+    nav3.style.transition = '0.8s ease-out';
+	}
+  else {
+    nav3.style.color = "#ff5757";
+    nav3.style.backgroundColor = "white";
+    nav3.style.transition = '0.8s ease-out';    
+  }
+
+});
+
+*/
