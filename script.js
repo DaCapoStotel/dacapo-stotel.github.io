@@ -39,7 +39,7 @@ window.addEventListener('scroll', function(){
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   } 
-  else if (scroll > 1200 && scroll < 1500) {
+  else if (scroll > 1200 /*&& scroll < 2000*/) {
     nav1.style.color = "#ff5757";
     nav2.style.color = "#ff5757";
     nav3.style.color = "white";
