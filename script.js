@@ -118,7 +118,7 @@ var observer = new IntersectionObserver(function(entries) {
   }
 }, { threshold: [1] });
 
-observer.observe(document.querySelector("#container"));
+observer.observe(document.querySelector("#header"));
 
 
 var observer = new IntersectionObserver(function(entries) {
