@@ -102,7 +102,7 @@ var observer = new IntersectionObserver(function(entries) {
   }
 }, { threshold: [1] });
 
-observer.observe(document.querySelector("#header"));
+observer.observe(document.querySelector("#container"));
 
 
 var observer = new IntersectionObserver(function(entries) {
@@ -119,7 +119,7 @@ var observer = new IntersectionObserver(function(entries) {
   }
   }, { threshold: [1] });
 
-observer.observe(document.querySelector("#ueber-uns-img"));
+observer.observe(document.querySelector("#about"));
 
 
 var observer = new IntersectionObserver(function(entries) {
