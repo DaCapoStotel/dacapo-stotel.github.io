@@ -116,8 +116,7 @@ var observer = new IntersectionObserver(function(entries) {
 
 observer.observe(document.querySelector("#container"));
 */
-
-var observer = new IntersectionObserver(function(entries) {
+var observer0 = new IntersectionObserver(function(entries) {
 	if(entries[0].isIntersecting === true){
 		    nav1.style.color = "white";
     nav2.style.color = "#ff5757";
@@ -131,10 +130,26 @@ var observer = new IntersectionObserver(function(entries) {
   }
   }, { threshold: [1] });
 
-observer.observe(document.querySelector("#ueber-uns-img"));
+observer0.observe(document.querySelector("#bildvonuns"));
+
+var observer1 = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true){
+		    nav1.style.color = "white";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  }
+  }, { threshold: [1] });
+
+observer1.observe(document.querySelector("#about"));
 
 
-var observer = new IntersectionObserver(function(entries) {
+var observer2 = new IntersectionObserver(function(entries) {
 	if(entries[0].isIntersecting === true){
 		    nav1.style.color = "#ff5757";
     nav2.style.color = "white";
@@ -148,10 +163,10 @@ var observer = new IntersectionObserver(function(entries) {
   }
 }, { threshold: [1] });
 
-observer.observe(document.querySelector("#wowann"));
+observer2.observe(document.querySelector("#wowann"));
 
 
-var observer = new IntersectionObserver(function(entries) {
+var observer3 = new IntersectionObserver(function(entries) {
 	if(entries[0].isIntersecting === true){
 		    nav1.style.color = "#ff5757";
     nav2.style.color = "#ff5757";
@@ -165,6 +180,5 @@ var observer = new IntersectionObserver(function(entries) {
   }
 }, { threshold: [1] });
 
-observer.observe(document.querySelector("#contact"));
-
+observer3.observe(document.querySelector("#contact"));
 
