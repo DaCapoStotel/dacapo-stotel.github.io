@@ -435,7 +435,9 @@ nav > ul {
 .contact-details {
   font-size: 1.5rem;
   text-shadow: 1.5px 1.5px 1px #1f1f1f;
-  transition: 0.3s ease-out;
+  transition: 1s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.44,.21,1.23);
   border: transparent;
   color: #ff5757;
 }
@@ -449,7 +451,9 @@ nav > ul {
   .contact-details {
   font-size: 1.2rem;
   text-shadow: 1.5px 1.5px 1px #1f1f1f;
-  transition: 0.5s ease-out;
+  transition: 0.5s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.44,.21,1.23);
   border: transparent;
   color: #ff5757;
 }
