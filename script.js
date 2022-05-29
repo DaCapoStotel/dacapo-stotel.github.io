@@ -128,7 +128,7 @@ var observer0 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-  }, { threshold: [1] });
+  }, { threshold: [0] });
 
 observer0.observe(document.querySelector("#bildvonuns"));
 
@@ -144,7 +144,7 @@ var observer1 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-  }, { threshold: [1] });
+  }, { threshold: [0] });
 
 observer1.observe(document.querySelector("#about"));
 
@@ -161,7 +161,7 @@ var observer2 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [1] });
+}, { threshold: [0] });
 
 observer2.observe(document.querySelector("#wowann"));
 
@@ -178,7 +178,7 @@ var observer3 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [1] });
+}, { threshold: [0] });
 
 observer3.observe(document.querySelector("#contact"));
 
