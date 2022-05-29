@@ -99,7 +99,7 @@ else if (/*!(mediaQuery.matches &&*/ scroll < 1200) {
 
 
 
-/*
+
 var observer = new IntersectionObserver(function(entries) {
   if (entries[0].isIntersecting === true){
 		    nav1.style.color = "#ff5757";
@@ -115,7 +115,7 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: [1] });
 
 observer.observe(document.querySelector("#container"));
-*/
+
 var observer0 = new IntersectionObserver(function(entries) {
 	if(entries[0].isIntersecting === true){
 		    nav1.style.color = "white";
@@ -128,7 +128,7 @@ var observer0 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-  }, { threshold: [0] });
+  }, { threshold: [1] });
 
 observer0.observe(document.querySelector("#bildvonuns"));
 
@@ -144,7 +144,7 @@ var observer1 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-  }, { threshold: [0] });
+  }, { threshold: [1] });
 
 observer1.observe(document.querySelector("#about"));
 
@@ -161,7 +161,7 @@ var observer2 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [0] });
+}, { threshold: [1] });
 
 observer2.observe(document.querySelector("#wowann"));
 
@@ -178,7 +178,6 @@ var observer3 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [0] });
+}, { threshold: [1] });
 
 observer3.observe(document.querySelector("#contact"));
-
