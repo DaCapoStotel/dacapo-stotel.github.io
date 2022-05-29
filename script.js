@@ -6,7 +6,7 @@
 window.addEventListener('scroll', function(){
   var scroll = this.pageYOffset || document.documentElement.scrollTop;
   var showPoint = this.innerHeight/8;
-	
+	/*
 	if (scroll <= 0) {
     nav1.style.color = "#ff5757";
     nav2.style.color = "#ff5757";
@@ -17,7 +17,7 @@ window.addEventListener('scroll', function(){
     nav1.style.transition = '0.8s ease-out';
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
-  }  
+  }  */
  /* 
   if(scroll > 0 && scroll < 800) {
     nav1.style.color = "white";
