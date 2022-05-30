@@ -101,7 +101,10 @@ else if (/*!(mediaQuery.matches &&*/ scroll < 1200) {
 
 
 var observer = new IntersectionObserver(function(entries) {
-  if (entries[0].isIntersecting === true){
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+  if (mediaQuery.matches && entries[0].isIntersecting === true){
 		    nav1.style.color = "#ff5757";
     nav2.style.color = "#ff5757";
     nav3.style.color = "#ff5757";
@@ -117,7 +120,7 @@ var observer = new IntersectionObserver(function(entries) {
 observer.observe(document.querySelector("#containerino"));
 
 var observer0 = new IntersectionObserver(function(entries) {
-	if(entries[0].isIntersecting === true){
+	if(mediaQuery.matches && entries[0].isIntersecting === true){
 		    nav1.style.color = "white";
     nav2.style.color = "#ff5757";
     nav3.style.color = "#ff5757";
@@ -133,7 +136,10 @@ var observer0 = new IntersectionObserver(function(entries) {
 observer0.observe(document.querySelector("#bildvonuns"));
 
 var observer1 = new IntersectionObserver(function(entries) {
-	if(entries[0].isIntersecting === true){
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+	if(mediaQuery.matches && entries[0].isIntersecting === true){
 		    nav1.style.color = "white";
     nav2.style.color = "#ff5757";
     nav3.style.color = "#ff5757";
@@ -150,7 +156,10 @@ observer1.observe(document.querySelector("#about"));
 
 
 var observer2 = new IntersectionObserver(function(entries) {
-	if(entries[0].isIntersecting === true){
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+	if(mediaQuery.matches && entries[0].isIntersecting === true){
 		    nav1.style.color = "#ff5757";
     nav2.style.color = "white";
     nav3.style.color = "#ff5757";
@@ -167,7 +176,10 @@ observer2.observe(document.querySelector("#wowann"));
 
 
 var observer3 = new IntersectionObserver(function(entries) {
-	if(entries[0].isIntersecting === true){
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+	if(mediaQuery.matches && entries[0].isIntersecting === true){
 		    nav1.style.color = "#ff5757";
     nav2.style.color = "#ff5757";
     nav3.style.color = "white";
