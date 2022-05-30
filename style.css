@@ -451,7 +451,7 @@ nav > ul {
   .contact-details {
   font-size: 1.2rem;
   text-shadow: 1.5px 1.5px 1px #1f1f1f;
-  transition: 0.5s ease;
+  transition: 0.8s ease;
   transition-timing-function: ease;
   transition-timing-function: cubic-bezier(.44,.73,.13,1.6)/*cubic-bezier(.44,.44,.21,1.23)*/;
   border: transparent;
