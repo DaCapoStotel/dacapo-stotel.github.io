@@ -53,10 +53,18 @@ a {
   color: #ff5757;
   text-shadow: 0.5px 0.5px 0.75px #1f1f1f;
   text-decoration: none;
+  transition: 0.3s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
 }
 
 a > h2 {
   text-shadow: 1.5px 1.5px 1px #1f1f1f;
+}
+
+a:active {
+  color: #d44646; 
+  /*font-size: 90%;*/
 }
 
 /** global classes styling **/
@@ -177,7 +185,23 @@ nav > ul {
 .nav-link {
   border-radius: 7px;
   padding: 2px;
+  transition: 0.2s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+  transform: translateZ(0);
 }
+/*
+.nav-link:hover {
+  Color: #d44646;
+  font-size: 1rem;
+    
+}
+*//*
+.nav-link:active {
+  color: #d44646; 
+  transform: scale(0.9) translateZ(0);
+  font-size: 0.9rem;
+}*/
 
 /**
 .nav-link:hover {
@@ -213,14 +237,10 @@ nav > ul {
 }
 
 #about {
-  margin-top: 0px;
+  padding-top: 60px;
   background: #eee;
 }
 
-@media (max-width: 650px)
-  #about{
-  background: white;
-}
 .brsmall {
             display: block;
             margin-bottom: .5em;
@@ -432,7 +452,7 @@ nav > ul {
 
 }
 
-.contact-details {
+#details {
   font-size: 1.5rem;
   text-shadow: 1.5px 1.5px 1px #1f1f1f;
   transition: 0.8s ease;
@@ -441,6 +461,11 @@ nav > ul {
   border: transparent;
   color: #ff5757;
 }
+
+#details:active {
+  color: #d44646; 
+ /* font-size: 90%;*/
+}
 /**
 .contact-details:hover {
   font-size: 1.6rem;
@@ -448,7 +473,7 @@ nav > ul {
 **/
 
 @media (max-width: 700px) {
-  .contact-details {
+  #details {
   font-size: 1.2rem;
   text-shadow: 1.5px 1.5px 1px #1f1f1f;
   transition: 0.8s ease;
@@ -456,14 +481,13 @@ nav > ul {
   transition-timing-function: cubic-bezier(.44,.73,.13,1.6)/*cubic-bezier(.44,.44,.21,1.23)*/;
   border: transparent;
   color: #ff5757;
+  }
+  /*
+  #details:active {
+  color: #d44646; 
+  font-size: 90%;
+  }*/
 }
-/**
-.contact-details:hover {
-  font-size: 1.3rem;
-}
-  **/
-}
-
 
 footer {
   margin-top: 0px;
@@ -486,4 +510,16 @@ footer > span {
   justify-content: flex-end;
   font-size: 0.9em;
   color: #444;
+}
+
+.footer-links {
+  font-size: 100%;
+  transition: 0.1s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+}
+
+.footer-links:active {
+  color: #d44646; 
+  font-size: 95%;
 }
