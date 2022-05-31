@@ -86,12 +86,24 @@ if (mediaQuery.matches && scroll > 1400) {
 else if (mediaQuery.matches && scroll < 1400) {
   details.style.fontSize = '1.1rem';
   }  
+/*else if (details.active && mediaQuery.matches && scroll > 1400) {
+  details.style.fontSize = '1.2rem';
+}
+else if (details.active && mediaQuery.matches && scroll < 1400) {
+  details.style.fontSize = '1rem';
+}*/
 else if (/*!(mediaQuery.matches && */scroll > 1200) {
   details.style.fontSize = '1.8rem';
 }    
 else if (/*!(mediaQuery.matches &&*/ scroll < 1200) {
   details.style.fontSize = '1.4rem';
 }
+/*else if (details.active && scroll > 1400) {
+  details.style.fontSize = '1.7rem';
+}
+else if (details.active && scroll < 1400) {
+  details.style.fontSize = '1.3rem';
+}*/
 
   
                        
@@ -100,12 +112,12 @@ else if (/*!(mediaQuery.matches &&*/ scroll < 1200) {
 
 
 
-var observer = new IntersectionObserver(function(entries) {
+var observer9 = new IntersectionObserver(function(entries) {
   
   const mediaQuery = window.matchMedia('(max-width: 650px)')
   
   if (mediaQuery.matches && entries[0].isIntersecting === true){
-		    nav1.style.color = "#ff5757";
+		nav1.style.color = "#ff5757";
     nav2.style.color = "#ff5757";
     nav3.style.color = "#ff5757";
     nav1.style.backgroundColor = "white";
@@ -115,10 +127,10 @@ var observer = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [1] });
+}, { threshold: [0.5] });
 
-observer.observe(document.querySelector("#containerino"));
-
+observer9.observe(document.querySelector("#bildvonuns"));
+/*
 var observer0 = new IntersectionObserver(function(entries) {
 	if(mediaQuery.matches && entries[0].isIntersecting === true){
 		    nav1.style.color = "white";
@@ -134,13 +146,13 @@ var observer0 = new IntersectionObserver(function(entries) {
 }, { threshold: [0.7] });
 
 observer0.observe(document.querySelector("#bildvonuns"));
-
+*/
 var observer1 = new IntersectionObserver(function(entries) {
   
   const mediaQuery = window.matchMedia('(max-width: 650px)')
   
 	if(mediaQuery.matches && entries[0].isIntersecting === true){
-		    nav1.style.color = "white";
+		nav1.style.color = "white";
     nav2.style.color = "#ff5757";
     nav3.style.color = "#ff5757";
     nav1.style.backgroundColor = "#ff5757";
@@ -150,7 +162,7 @@ var observer1 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [0.7] });
+}, { threshold: [0.5] });
 
 observer1.observe(document.querySelector("#about"));
 
@@ -170,7 +182,7 @@ var observer2 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [0.7] });
+}, { threshold: [0.5] });
 
 observer2.observe(document.querySelector("#wowann"));
 
@@ -190,7 +202,7 @@ var observer3 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [0.7] });
+}, { threshold: [0.5] });
 
 
 observer3.observe(document.querySelector("#contact"));
