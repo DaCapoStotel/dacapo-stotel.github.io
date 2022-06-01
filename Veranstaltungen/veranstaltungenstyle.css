@@ -10,15 +10,9 @@
 
 body {
   background-color: #eee;
-  /** background-image: linear-gradient(60deg, #0e3768 0%, #b0d8e3 100%); **/
 background-image: linear-gradient(180deg,
       rgba(255, 255, 255, 0) 0%,
       rgba(0, 0, 0, 1) 96%),
- /**https://img.ecmaps.de/remote/.jpg?url=https%3A%2F%2Fdam.destination.one%2F615547%2F7baeb745aad5fc4c3428bb081ebb5888ad46f3e8a48fd95405246f2a169bbec4%2Fkulturzentrum-alte-schule-stotel.jpg&scale=both&mode=crop&quality=90&width=1200&height=630**/ /**https://i.pinimg.com/originals/a1/6f/b2/a16fb2d61c71cfcfd495f0d85e9caf2d.png**/ 
-/**https://i.pinimg.com/originals/3b/39/1a/3b391aa210e495ac1c5a10fc9dcc1568.jpg**/ 
-/**https://previews.123rf.com/images/jozefklopacka/jozefklopacka1604/jozefklopacka160400020/54742015-vieja-nota-de-la-m%C3%BAsica-y-el-efecto-de-la-vendimia-fondo-musical.jpg**/  /**https://setersjenten.files.wordpress.com/2012/06/shtmsc002.jpg**/
-  /**https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png**/
-  /**https://c1.wallpaperflare.com/preview/594/292/847/music-notenblatt-black-white.jpg**/ 
 	url(https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/notenblatt-huhn.png?raw=true);
   background-size: cover;
   background-repeat: no-repeat;
@@ -46,14 +40,21 @@ background-image: linear-gradient(180deg,
   position: relative;
 }
 
-li {
-  list-style: none;
-}
-
 a {
   color: #ff5757;
   text-shadow: 0.5px 0.5px 0.75px #1f1f1f;
   text-decoration: none;
+  transition: 0.3s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+}
+
+a > h2 {
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+}
+
+a:hover {
+  color: #d44646; 
 }
 
 /** global classes styling **/
@@ -101,9 +102,11 @@ header {
 @media (max-width: 600px) {
   header {
     flex-wrap: wrap;
-      -webkit-box-shadow: 0 6px 8px -7px black;
-	   -moz-box-shadow: 0 6px 8px -7px black;
-	        box-shadow: 0 6px 8px -7px black;
+    /**
+      -webkit-box-shadow: 0 0px 0px -0px black;
+	   -moz-box-shadow: 0 0px 0px -0px black;
+	        box-shadow: 0 0px 0px -0px black;
+    **/
   }
 }
 
@@ -164,6 +167,7 @@ nav > ul {
   flex-direction: row;
   /**justify-content: space-around;**/
   color: #ff5757;
+  list-style: none;
 }
 
 @media (max-width: 650px) {
@@ -179,37 +183,41 @@ nav > ul {
   }
 }
 
-/** nav import **/
-
-/**
-.nav-link:hover {
-  text-decoration:underline;
-}
-**/
-
 /** über uns **/
-
 
 #bildvonuns {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: center;*/
   /** height: 300px; **/
-  margin-top: 50px;
+  padding-top: 90px;
+  background: #eee;
+  padding-bottom: 15px;
 }
 
-#ueber-uns-img {
-  max-width: 100%;
-  max-height: 100%;
-  box-shadow: /**0 9px 0px 0px #eee, 0 -0px 0px 0px #f0f1f5,**/ 6px 0 10px -10px black, -6px 0 10px -10px black;
-  
+.ul-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#bildvonuns > div > ul {
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  margin: 15px;
+}
+
+@media (max-width: 650px) {
+  #bildvonuns > div > ul {
+  }
 }
 
 @media (max-width: 650px) {
   #bildvonuns {
-    margin-top: 80px;
+    margin-top: 30px;
   }
 }
 
@@ -219,14 +227,11 @@ nav > ul {
   padding-bottom: 15px;
 }
 
-.brsmall {
-            display: block;
-            margin-bottom: .5em;
-        }
-.brverysmall {
-            display: block;
-            margin-bottom: .2em;
-        }
+@media (max-width: 650px) {
+  #about {
+    padding-top: 30px;
+  }
+}
 
 #about .grid {
   display: flex;
@@ -250,27 +255,41 @@ nav > ul {
   align-items: center;
   justify-content: center;
   padding: 10px;
+  width: calc(100% / 0.5);
+}
+
+@media (max-width: 650px) {
+#about .icon {
+  width: 100%; 
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  }
 }
 
 #about .icon > img {
-  width: 200px;
+  width: 100%;
 }
-
+/*
 @media (max-width: 650px) {
 #about .icon > img {
   width: 100%; 
   }
 }
-
+*/
 .about-section-header > h2 {
   font-size: 2rem;
-  margin: 25px;
+  margin: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 @media (max-width: 28.75em) {
   .about-section-header > h2 {
     font-size: 1.5rem; 
-    text-align: center;
   }
 }
 /**
@@ -287,6 +306,7 @@ nav > ul {
   height: 100%;
   width: 80vw;
   padding: 10px;
+  width: calc(100% / 0.5);
 }
 
 #about > a {
@@ -294,13 +314,13 @@ nav > ul {
   text-shadow: none;
   text-decoration: none;
 }
-
+/*
 #about > a:hover {
   color: #ff5757;
   text-shadow: 0.5px 0.5px 0.5px #1f1f1f;
   text-decoration: none;
   transition: 0.2s ease-out;
-  }
+  }*/
 
 /**
 #about .desc > h2:hover {
@@ -309,139 +329,24 @@ nav > ul {
 **/
 
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   #about .desc {
     width: 100%;
     text-align: center;
-    padding: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
     height: 100%;
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   #about .desc > p {
     display: none;
   }
 }
 
-@media (max-width: 650px) {
-  #about {
-    margin-top: 0;
-  }
-}
-
-/**#how-it-works {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-#how-it-works > iframe {
-  max-width: 560px;
-  width: 100%;
-}**/
-
-#wowann {
-  padding-top: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: #eee;
-}
-
-.kachel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: calc(100% / 0.66);
-  margin: 10px;
-  border: 1px solid #555555;
-  border-radius: 1px;
-}
-
-/**Einschub**/
-
-#wo {
-  border-radius: 1px;
-}
-
-#wo > iframe {
-  max-width: 600px;
-  width: 100%;
-}
-
-#wann {
-  max-width: 560px;
- width: 100%;
-  background-color: #eee;
-}
-/**Einschub ende**/
-
-.kachel > .level {
-  background-color: #ddd;
-  color: black;
-  padding: 15px 0;
-  width: 100%;
-  text-transform: uppercase;
-  font-weight: 70;
-  font-size: 1.5rem;
-}
-
-.kachel > h2 {
-  margin-top: 20px;
-}
-
-.kachel > ol {
-  margin: 15px 0;
-}
-
-.kachel > ol > li {
-  padding: 5px 0;
-}
-
-@media (max-width: 800px) {
-  #wowann {
-    flex-direction: column;
-  }
-  #wo {
-    max-width: 600px;
-    width: 100%;
-    padding: 10px;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    border: 0px solid #555555;
-  }
-  #wann {
-    max-width: 300px;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 10px;
-     margin-top: 20px;
-  }
- 
-  .kachel > .level {
-  background-color: #ddd;
-  color: black;
-  padding: 10px 0;
-  width: 100%;
-  text-transform: uppercase;
-  font-weight: 70;
-  font-size: 1.5rem;
-}
-
-.kachel > h2 {
-  margin-top: 10px;
-}
-
-.kachel > ol {
-  margin: 5px 0;
-}
-
-.kachel > ol > li {
-  padding: 5px 0;
-}
-}
 
 /* Contact section */
 
@@ -518,6 +423,7 @@ footer {
 footer > ul {
   display: flex;
   justify-content: flex-end;
+  list-style: none;
 }
 
 footer > ul > li {
