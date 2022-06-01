@@ -80,30 +80,18 @@ else if (mediaQuery.matches && scroll > 0) {
 
   
   
-if (mediaQuery.matches && scroll > 1400) {
+if (mediaQuery.matches && scroll > 1500) {
   details.style.fontSize = '1.3rem';
 }
-else if (mediaQuery.matches && scroll < 1400) {
+else if (mediaQuery.matches && scroll < 1500) {
   details.style.fontSize = '1.1rem';
   }  
-/*else if (details.active && mediaQuery.matches && scroll > 1400) {
-  details.style.fontSize = '1.2rem';
-}
-else if (details.active && mediaQuery.matches && scroll < 1400) {
-  details.style.fontSize = '1rem';
-}*/
-else if (/*!(mediaQuery.matches && */scroll > 1200) {
+else if (scroll > 1200) {
   details.style.fontSize = '1.8rem';
 }    
-else if (/*!(mediaQuery.matches &&*/ scroll < 1200) {
+else if (scroll < 1200) {
   details.style.fontSize = '1.4rem';
 }
-/*else if (details.active && scroll > 1400) {
-  details.style.fontSize = '1.7rem';
-}
-else if (details.active && scroll < 1400) {
-  details.style.fontSize = '1.3rem';
-}*/
 
   
                        
@@ -181,11 +169,24 @@ var observer2 = new IntersectionObserver(function(entries) {
     nav1.style.transition = '0.8s ease-out';
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
+    /*details.style.fontSize = '1.1rem';*/
   }
 }, { threshold: [0.5] });
 
 observer2.observe(document.querySelector("#wowann"));
 
+/*
+var observer8 = new IntersectionObserver(function(entries) {
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+	if(entries[0].isIntersecting === true){
+    details.style.fontSize = '1.4rem';
+  }
+}, { threshold: [0.5] });
+
+observer8.observe(document.querySelector("#wowann"));
+*/
 
 var observer3 = new IntersectionObserver(function(entries) {
   
@@ -206,6 +207,23 @@ var observer3 = new IntersectionObserver(function(entries) {
 
 
 observer3.observe(document.querySelector("#contact"));
+
+
+/*
+var observer4 = new IntersectionObserver(function(entries) {
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+	if(mediaQuery.matches && entries[0].isIntersecting === true){
+		details.style.fontSize = '1.3rem';
+  }
+  else if (entries[0].isIntersecting === true){
+		details.style.fontSize = '1.4rem';
+  }
+}, { threshold: [0.5] });
+
+
+observer4.observe(document.querySelector("#details"));*/
 
 /*
 window.addEventListener('scroll', function() {
