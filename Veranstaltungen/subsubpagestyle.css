@@ -259,7 +259,6 @@ nav > ul {
 .about-section-header {
     display: flex;
   justify-content: left;
-  padding-left: 10px;
 }
 
 .about-section-header > h2 {
@@ -332,11 +331,11 @@ audio::-webkit-media-controls-mute-button {
   border-radius: 50%;
 }
 
-#but:hover {
+#zurueck-but:hover {
   background-color: #d44646; 
 }
 
-#but {
+#zurueck-but {
   color: white;
   display: flex;
   justify-content: right;
@@ -352,31 +351,31 @@ audio::-webkit-media-controls-mute-button {
   font-size: 1.5rem;
 }
 
-#but:active {
+#zurueck-but:active {
   font-size: 1.4rem;
 }
 
 @media (max-width: 650px){
-  #but {
+  #zurueck-but {
   font-size: 1.1rem;
   border-radius: 7px;
 }
 }
 
 @media (max-width: 650px){
-  #but:active {
+  #zurueck-but:active {
   font-size: 1rem;
 }
 }
 
-#wowann {
+#zurueck {
   display: flex;
   flex-direction: row;
   justify-content: center;
   background: #eee;
 }
 
-.kachel {
+.zurueck-button {
   display: flex;
   flex-direction: column;
   align-items: center;
