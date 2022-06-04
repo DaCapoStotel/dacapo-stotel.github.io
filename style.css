@@ -232,7 +232,7 @@ nav {
 }
 
 #about {
-  padding-top: 25px;
+  padding-top: 30px;
   background: #eee;
 }
 
@@ -242,7 +242,7 @@ nav {
         }
 .brverysmall {
             display: block;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
 /**#about .icon {
@@ -277,12 +277,12 @@ nav {
     height: 100%;
   }
 }
-
+/*
 @media (max-width: 650px) {
   #about {
-    margin-top: 0;
+    padding-top: 30px;
   }
-}
+}*/
 
 #but:hover {
   background-color: #d44646; 
