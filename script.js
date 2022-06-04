@@ -80,16 +80,16 @@ else if (mediaQuery.matches && scroll > 0) {
 
   
   
-if (mediaQuery.matches && scroll > 1500) {
+if (mediaQuery.matches && scroll > 1300) {
   details.style.fontSize = '1.3rem';
 }
-else if (mediaQuery.matches && scroll < 1500) {
+else if (mediaQuery.matches && scroll < 1300) {
   details.style.fontSize = '1.1rem';
   }  
-else if (scroll > 1250) {
+else if (scroll > 1200) {
   details.style.fontSize = '1.8rem';
 }    
-else if (scroll < 1250) {
+else if (scroll < 1200) {
   details.style.fontSize = '1.4rem';
 }
 
