@@ -232,7 +232,7 @@ nav {
 }
 
 #about {
-  padding-top: 15px;
+  padding-top: 20px;
   background: #eee;
 }
 
@@ -242,7 +242,7 @@ nav {
         }
 .brverysmall {
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
 /**#about .icon {
