@@ -329,6 +329,12 @@ audio::-webkit-media-controls-timeline {
 audio::-webkit-media-controls-mute-button {
   background-color: #ddd;
   border-radius: 50%;
+  z-index: 2;
+}
+
+audio::-webkit-media-controls-toggle-closed-captions-button {
+  background-color: #ddd;
+  border-radius: 50%;
 }
 
 #zurueck-but:hover {
