@@ -115,7 +115,7 @@ var observer9 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [0.5] });
+}, { threshold: [1] });
 
 observer9.observe(document.querySelector("#bildvonuns"));
 /*
