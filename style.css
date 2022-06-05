@@ -236,6 +236,20 @@ nav {
   background: #eee;
 }
 
+#about .grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (max-width: 650px) {
+#about .grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+}
+
 .brsmall {
             display: block;
             margin-bottom: .5em;
