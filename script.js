@@ -150,7 +150,7 @@ var observer1 = new IntersectionObserver(function(entries) {
     nav2.style.transition = '0.8s ease-out';
     nav3.style.transition = '0.8s ease-out';
   }
-}, { threshold: [0.5] });
+}, { threshold: [0.7] });
 
 observer1.observe(document.querySelector("#about"));
 
