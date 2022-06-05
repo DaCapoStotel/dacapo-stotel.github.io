@@ -1,155 +1,494 @@
-<!DOCTYPE html>
-<html lang="de" >
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Da Capo</title>
-  <link rel="stylesheet" href="./veranstaltungenstyle.css">
+/** global element styling **/
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-  crossorigin="anonymous"
-/>
-<div id="page-wrapper">
-  <header id="header">
-    <div class="logo">
-   <a href="https://dacapostotel.github.io/dacapo-stotel.github.io">
-         <img id="header-img"  src="https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/DaCapoStotel.png?raw=true"
-        alt="DaCapo" >
-      </a>
-    </div>
-<!--https://lh3.googleusercontent.com/pw/AM-JKLXf9VYYtjKM7Fwvx_fCa9LQzzvSPWp9RaZh1t0Df5p4mvPPaFL-WKpkD-HcA81HD9haP2jiKVlW7W3MKO761LsS7ORjStc3T08pjjvr9D_UroKjw2-Smj48EJo2VIdkzFKIqYEIgzP5ahdNKbyV6-M0mQ=w1006-h121-no?authuser=0 -->
-    <nav id="nav-bar">
-      <ul class="nav-list">
-        <li><a class="nav-link" href="https://dacapostotel.github.io/dacapo-stotel.github.io">DaCapo</a>&nbsp;>&nbsp;<a class="nav-link" href="https://dacapostotel.github.io/dacapo-stotel.github.io/Veranstaltungen/veranstaltungenindex.html">Aktuelles & Veranstaltungen</a></li>
-        <!--<li><a class="nav-link" href="https://dacapostotel.github.io/dacapo-stotel.github.io/Veranstaltungen/veranstaltungenindex.html">Alle Veranstaltungen</a></li>-->
-      </ul>
-    </nav>
-  </header>
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
-  <div class="container">
-  <section id="bildvonuns">
-     <div class="about-section-header">
-    <h2>Aktuelles</h2>
-  </div>
-    <div class="ul-div">
-    <ul>
-      <li>xx.xx.: Dies ist ein Platzhalter</li>
-      <li>xx.xx.: Dies ist ein Platzhalter</li>
-      <li>Dies ist ein Platzhalter</li>
-    </ul>
-      </div>
-  </section>
-    
-    <section id="about">
-      <div class="grid" style="background: #eee; box-shadow: 0 0  0 white, 0 0 0 0 white;" >
-        <div class="about-section-header">
-    <h2>Veranstaltungen</h2>
-  </div>
-      </div>
-      <a href="https://dacapostotel.github.io/dacapo-stotel.github.io/Veranstaltungen/subsubpageindex.html">
-      <div class="grid">
-        <div class="icon"><img src="https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/pexels-photo-236259.jpeg?raw=true"/></div>
-        <div class="desc">
-          <h2>Brot und Rosen - Singen zum Internationalen Frauentag 2019</h2>
-          <span class="brverysmall"></span>
-          <p>
-            Bei diesem Text handelt es sich um einen Platzhalter. Bei diesem Text handelt es sich um einen Platzhalter. Bei diesem Text handelt es sich um einen Platzhalter. Bei diesem Text handelt es sich um einen Platzhalter.
-            <span class="brsmall"></span>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-Bei diesem Text handelt es sich um einen Platzhalter.
-          </p>
-        </div>
-      </div>
-    </a>
-   <a href="https://dacapostotel.github.io/dacapo-stotel.github.io/Veranstaltungen/subsubpageindex.html">
-      <div class="grid">
-        <div class="icon"> 
-          <img src="https://www.gew-hb.de/fileadmin/_processed_/f/9/csm_KayH20131011-_B1A3116_afe5136923.jpg"/>
-        </div>
-        <div class="desc">
-          <h2>Dies ist ein Platzhalter</h2>
-          <span class="brverysmall"></span>
-          <p>
-            Bei diesem Text handelt es sich um einen Platzhalter. Bei diesem Text handelt es sich um einen Platzhalter. Bei diesem Text handelt es sich um einen Platzhalter.
-          </p>
-          <script type="text/javascript" src="js/cards.js"></script>
-        </div>
-    </div>
-   </a>
-  <a href="https://dacapostotel.github.io/dacapo-stotel.github.io/Veranstaltungen/subsubpageindex.html">
-      <div class="grid">
-        <div class="icon"><img src="https://www.gew-hb.de/fileadmin/_processed_/f/9/csm_KayH20131011-_B1A3116_afe5136923.jpg"/></div>
-        <div class="desc">
-          <h2 id="AktuellesJavaScriptTest">Dies ist ein Platzhalter</h2>
-          <span class="brverysmall"></span>
-          <p>
-            Bei diesem Text handelt es sich um einen Platzhalter. Bei diesem Text handelt es sich um einen Platzhalter. Bei diesem Text handelt es sich um einen Platzhalter.
-          </p>
-        </div>
-      </div>
-    </a>
-    </section>
-  <!--
-    <section id="wowann">
-      
-         <div class="kachel" id="wo">
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196.337020474601!2d8.597200440432538!3d53.447902728079434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b6b5a5220642bd%3A0x9ebed421b0cd453b!2sKulturzentrum%20Alte%20Schule!5e0!3m2!1sde!2sde!4v1649876594853!5m2!1sde!2sde" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      
-      <div class="kachel" id="wann">
-        <div class="level">Singen</div>
-        <h2>wöch. Dienstag</h2>
-        <ol>
-          <li>19:30 Uhr - 21:00 Uhr</li>
-          <li>Kulturzentrum Alte Schule, Stotel<br/>
-          Fleester Str. 2, 27612 Loxstedt</li>
-        </ol>
-      </div>
-    </section>
-    -->
-    <!-- START CONTACT SECTION -->
-<!--
-<section id="contact" class="contact-section">
-  <div class="contact-section-header">
-    <h2>Kontakt - Bettina C. Flach</h2>
-  </div>
- 
-    <div class="contact-section-header">
-    <p>Schau gern vorbei. Du erreichst uns hier:</p>
-  </div>
-  <div class="contact-links">
-    <a href="mailto:example@example.com" class="btn contact-details"
-      ></i> dacapo.stotel@gmail.com</a>
-  </div>
-</section>
--->
-<!-- END CONTACT SECTION -->
-    
-     <section id="zurueck">
-       <div class="zurueck-button">
-         <a href="https://dacapostotel.github.io/dacapo-stotel.github.io/Veranstaltungen/veranstaltungenindex.html">
-           <div id="zurueck-but">Zurück</div></a>
-  </div>
-       
-    </section>
+body {
+  background-color: #eee;
+background-image: linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 1) 96%),
+	url(https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/notenblatt-huhn.png?raw=true);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
   
-    <footer>
-      <ul>
-        <li><a class"footer-links" href="https://dacapostotel.github.io/dacapo-stotel.github.io/#bildvonuns">Über uns</a></li>
-        <li><a class"footer-links" href="https://dacapostotel.github.io/dacapo-stotel.github.io/#wowann">Wo & Wann</a></li>
-        <li><a class"footer-links" href="https://dacapostotel.github.io/dacapo-stotel.github.io/#contact">Kontakt</a></li>
-      </ul>
-      <span>Platzhalter</span>
-    </footer>
-  </div>
-</div>
-<!-- partial -->
   
-</body>
-</html>
+  font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 650px) {
+  body {
+  background-image: linear-gradient(60deg, #eee 0%, #eee 100%);
+}
+}
+/** 
+#f1f2f6	(241,242,246)
+#555555	(85,85,85)
+#0e3768	(14,55,104)
+#b0d8e3	(176,216,227)
+#efe897	(239,232,151)
+**/
+
+#page-wrapper {
+  position: relative;
+}
+
+a {
+  color: #ff5757;
+  text-shadow: 0.5px 0.5px 0.75px #1f1f1f;
+  text-decoration: none;
+  transition: 0.3s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+}
+
+a > h2 {
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+}
+
+a:hover {
+  color: #d44646; 
+}
+
+/** global classes styling **/
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 6px 0 10px -10px black, -6px 0 10px -10px black;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+.grid {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+    /**
+      -webkit-box-shadow: 0 0px 0px -0px black;
+	   -moz-box-shadow: 0 0px 0px -0px black;
+	        box-shadow: 0 0px 0px -0px black;
+    **/
+  }
+}
+
+
+.logo {
+  width: 60vw;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > a > img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+@media (max-width: 650px) {
+  .logo > a > img {
+    margin: 0 auto;
+  }
+}
+
+nav {
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 0px;
+    padding-bottom: 10px;
+  }
+  nav li {
+    padding-bottom: 5px;
+    padding: 2.5px;
+  }
+}
+
+nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  /**justify-content: space-around;**/
+  color: #ff5757;
+  list-style: none;
+}
+
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+
+/** über uns **/
+
+#bildvonuns {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;
+  justify-content: center;
+  text-align: center;*/
+  /** height: 300px; **/
+  padding-top: 90px;
+  background: #eee;
+  padding-bottom: 15px;
+}
+
+.ul-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#bildvonuns > div > ul {
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  margin: 15px;
+}
+
+@media (max-width: 650px) {
+  #bildvonuns > div > ul {
+  }
+}
+
+@media (max-width: 650px) {
+  #bildvonuns {
+    margin-top: 30px;
+  }
+}
+
+#about {
+  padding-top: 90px;
+  background: #eee;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 650px) {
+  #about {
+    padding-top: 30px;
+  }
+}
+
+#about .grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+  background-color: #ddd;
+  box-shadow: 6px 6px 10px -10px black, -6px 6px 10px -10px black;
+}
+
+@media (max-width: 650px) {
+#about .grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+}
+
+#about .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: calc(100% / 0.5);
+}
+
+@media (max-width: 650px) {
+#about .icon {
+  width: 100%; 
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  }
+}
+
+#about .icon > img {
+  width: 100%;
+}
+/*
+@media (max-width: 650px) {
+#about .icon > img {
+  width: 100%; 
+  }
+}
+*/
+.about-section-header > h2 {
+  font-size: 2rem;
+  margin: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 28.75em) {
+  .about-section-header > h2 {
+    font-size: 1.5rem; 
+  }
+}
+/**
+@media (max-width: 550px) {
+  #about .icon {
+    display: none;
+  }
+}
+**/
+#about .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 80vw;
+  padding: 10px;
+  width: calc(100% / 0.5);
+}
+
+#about > a {
+  color: black;
+  text-shadow: none;
+  text-decoration: none;
+}
+/*
+#about > a:hover {
+  color: #ff5757;
+  text-shadow: 0.5px 0.5px 0.5px #1f1f1f;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+  }*/
+
+/**
+#about .desc > h2:hover {
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+}
+**/
+
+
+@media (max-width: 650px) {
+  #about .desc {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  #about .desc > p {
+    display: none;
+  }
+}
+
+
+/* Contact section */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background: #eee;
+}
+
+.contact-section-header > h2 {
+   font-size: 2rem; 
+  }
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 1.5rem; 
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+
+}
+
+.contact-details {
+  font-size: 1.5rem;
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+  transition: 0.3s ease-out;
+  border: transparent;
+  color: #ff5757;
+}
+
+.contact-details:hover {
+  font-size: 1.6rem;
+}
+
+
+@media (max-width: 700px) {
+  .contact-details {
+  font-size: 1.2rem;
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+  transition: 0.3s ease-out;
+  border: transparent;
+  color: #ff5757;
+}
+
+.contact-details:hover {
+  font-size: 1.3rem;
+}
+}
+
+
+#zurueck-but:hover {
+  background-color: #d44646; 
+}
+
+#zurueck-but {
+  color: white;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  text-align: right;
+  transition: 0.2s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+  padding: 5px;
+  border-radius: 12.5px;
+  background-color: #ff5757;
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+  font-size: 1.5rem;
+}
+
+#zurueck-but:active {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 650px){
+  #zurueck-but {
+  font-size: 1.1rem;
+  border-radius: 7px;
+}
+}
+
+@media (max-width: 650px){
+  #zurueck-but:active {
+  font-size: 1rem;
+}
+}
+
+#zurueck {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #eee;
+  padding-bottom: 10px;
+  margin-top: -15px;
+}
+
+.zurueck-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+
+
+footer {
+  margin-top: 0px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
