@@ -414,6 +414,61 @@ nav > ul {
 }
 
 
+#zurueck-but:hover {
+  background-color: #d44646; 
+}
+
+#zurueck-but {
+  color: white;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  text-align: right;
+  transition: 0.2s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+  padding: 5px;
+  border-radius: 12.5px;
+  background-color: #ff5757;
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+  font-size: 1.5rem;
+}
+
+#zurueck-but:active {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 650px){
+  #zurueck-but {
+  font-size: 1.1rem;
+  border-radius: 7px;
+}
+}
+
+@media (max-width: 650px){
+  #zurueck-but:active {
+  font-size: 1rem;
+}
+}
+
+#zurueck {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #eee;
+  padding-bottom: 10px;
+  margin-top: -15px;
+}
+
+.zurueck-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+
+
 footer {
   margin-top: 0px;
   background-color: #ddd;
