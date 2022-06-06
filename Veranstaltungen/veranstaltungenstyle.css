@@ -183,9 +183,9 @@ nav > ul {
   }
 }
 
-/** über uns **/
+/** START AKTUELLES SECTION **/
 
-#bildvonuns {
+#aktuelles {
   display: flex;
   flex-direction: column;
   /*align-items: center;
@@ -203,7 +203,7 @@ nav > ul {
   justify-content: center;
 }
 
-#bildvonuns > div > ul {
+#aktuelles > div > ul {
   align-items: left;
   justify-content: left;
   text-align: left;
@@ -211,29 +211,32 @@ nav > ul {
 }
 
 @media (max-width: 650px) {
-  #bildvonuns > div > ul {
+  #aktuelles > div > ul {
   }
 }
 
 @media (max-width: 650px) {
-  #bildvonuns {
+  #aktuelles {
     margin-top: 30px;
   }
 }
 
-#about {
+/* END AKTUELLES SECTION */
+/* START VERANSTALTUNGEN SECTION */
+
+#veranstaltungen {
   padding-top: 90px;
   background: #eee;
   padding-bottom: 15px;
 }
 
 @media (max-width: 650px) {
-  #about {
+  #veranstaltungen {
     padding-top: 30px;
   }
 }
 
-#about .grid {
+#veranstaltungen .grid {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -243,14 +246,14 @@ nav > ul {
 }
 
 @media (max-width: 650px) {
-#about .grid {
+#veranstaltungen .grid {
   display: flex;
   flex-direction: column;
   justify-content: center;
   }
 }
 
-#about .icon {
+#veranstaltungen .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +262,7 @@ nav > ul {
 }
 
 @media (max-width: 650px) {
-#about .icon {
+#veranstaltungen .icon {
   width: 100%; 
   padding-bottom: 5px;
   padding-left: 10px;
@@ -268,17 +271,11 @@ nav > ul {
   }
 }
 
-#about .icon > img {
+#veranstaltungen .icon > img {
   width: 100%;
 }
-/*
-@media (max-width: 650px) {
-#about .icon > img {
-  width: 100%; 
-  }
-}
-*/
-.about-section-header > h2 {
+
+.section-header > h2 {
   font-size: 2rem;
   margin: 20px;
   text-align: center;
@@ -288,18 +285,12 @@ nav > ul {
 }
 
 @media (max-width: 28.75em) {
-  .about-section-header > h2 {
+  .section-header > h2 {
     font-size: 1.5rem; 
   }
 }
-/**
-@media (max-width: 550px) {
-  #about .icon {
-    display: none;
-  }
-}
-**/
-#about .desc {
+
+#veranstaltungen .desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -309,13 +300,13 @@ nav > ul {
   width: calc(100% / 0.5);
 }
 
-#about > a {
+#veranstaltungen > a {
   color: black;
   text-shadow: none;
   text-decoration: none;
 }
 /*
-#about > a:hover {
+#veranstaltungen > a:hover {
   color: #ff5757;
   text-shadow: 0.5px 0.5px 0.5px #1f1f1f;
   text-decoration: none;
@@ -323,14 +314,14 @@ nav > ul {
   }*/
 
 /**
-#about .desc > h2:hover {
+#veranstaltungen .desc > h2:hover {
   text-shadow: 1.5px 1.5px 1px #1f1f1f;
 }
 **/
 
 
 @media (max-width: 650px) {
-  #about .desc {
+  #veranstaltungen .desc {
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
@@ -342,77 +333,12 @@ nav > ul {
 }
 
 @media (max-width: 650px) {
-  #about .desc > p {
+  #veranstaltungen .desc > p {
     display: none;
   }
 }
 
-
-/* Contact section */
-
-.contact-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 80vh;
-  padding: 0 2rem;
-  background: #eee;
-}
-
-.contact-section-header > h2 {
-   font-size: 2rem; 
-  }
-
-@media (max-width: 28.75em) {
-  .contact-section-header > h2 {
-    font-size: 1.5rem; 
-  }
-}
-
-.contact-section-header > p {
-  font-style: italic;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 980px;
-  margin-top: 4rem;
-  flex-wrap: wrap;
-
-}
-
-.contact-details {
-  font-size: 1.5rem;
-  text-shadow: 1.5px 1.5px 1px #1f1f1f;
-  transition: 0.3s ease-out;
-  border: transparent;
-  color: #ff5757;
-}
-
-.contact-details:hover {
-  font-size: 1.6rem;
-}
-
-
-@media (max-width: 700px) {
-  .contact-details {
-  font-size: 1.2rem;
-  text-shadow: 1.5px 1.5px 1px #1f1f1f;
-  transition: 0.3s ease-out;
-  border: transparent;
-  color: #ff5757;
-}
-
-.contact-details:hover {
-  font-size: 1.3rem;
-}
-}
-
+/* END VERANSTALTUNGEN SECTION */
 
 #zurueck-but:hover {
   background-color: #d44646; 
