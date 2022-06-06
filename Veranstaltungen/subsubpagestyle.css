@@ -168,6 +168,7 @@ nav > ul {
   nav > ul {
     flex-direction: row;
     width: 100%;
+    align-items: center;
   }
 }
 
