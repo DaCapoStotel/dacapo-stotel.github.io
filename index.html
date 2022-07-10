@@ -114,5 +114,17 @@ Chorprobe haben wir jeden Dienstag von 19:30 bis 21:00 Uhr im Kulturzentrum Alte
 <!-- partial -->
   <script  src="./script.js"></script>
 
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
