@@ -45,7 +45,7 @@ collections:
         desc:       fieldset and legend tag
         wwbody: |
             <fieldset>
-            <legend>
+            <legend style="color: red;">
             - {label: "Body", name: "body3", widget: "markdown"}
             </legend>
             </fieldset>
