@@ -29,6 +29,7 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body1", widget: "markdown"}
       - caption:    fieldset msie5
+        name: html1
         tinycap:    fieldset
         domain:     html
         desc:       fieldset and legend tag
@@ -38,6 +39,7 @@ collections:
             </fieldset>
       - {label: "Body", name: "body2", widget: "markdown"}
       - caption:    fieldset msie5
+        name: html2
         tinycap:    fieldset
         domain:     html
         desc:       fieldset and legend tag
