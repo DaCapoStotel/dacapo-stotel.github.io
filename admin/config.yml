@@ -28,5 +28,23 @@ collections:
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body1", widget: "markdown"}
+      - caption:    fieldset msie5
+        tinycap:    fieldset
+        domain:     html
+        desc:       fieldset and legend tag
+        wwbody: |
+            <fieldset>
+            <legend>legend</legend>
+            </fieldset>
       - {label: "Body", name: "body2", widget: "markdown"}
-      - {label: "Body", name: "body3", widget: "markdown"}
+      - caption:    fieldset msie5
+        tinycap:    fieldset
+        domain:     html
+        desc:       fieldset and legend tag
+        wwbody: |
+            <fieldset>
+            <legend>
+            - {label: "Body", name: "body3", widget: "markdown"}
+            </legend>
+            </fieldset>
+      - {label: "Body", name: "body4", widget: "markdown"}
