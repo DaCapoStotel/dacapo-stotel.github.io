@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: DaCapoStotel/dacapo-stotel.github.io
   branch: main # Branch to update (optional; defaults to master)
   media_folder: "posts/blog" # Media files will be stored in the repo under static/images/uploads
