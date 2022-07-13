@@ -1,0 +1,1157 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="de" >
+
+<head>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Da Capo</title>
+
+</head>
+
+<style>
+/** global element styling **/
+
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  /** background-image: linear-gradient(60deg, #0e3768 0%, #b0d8e3 100%); **/
+background-image: linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 1) 96%),
+ /**https://img.ecmaps.de/remote/.jpg?url=https%3A%2F%2Fdam.destination.one%2F615547%2F7baeb745aad5fc4c3428bb081ebb5888ad46f3e8a48fd95405246f2a169bbec4%2Fkulturzentrum-alte-schule-stotel.jpg&scale=both&mode=crop&quality=90&width=1200&height=630**/ /**https://i.pinimg.com/originals/a1/6f/b2/a16fb2d61c71cfcfd495f0d85e9caf2d.png**/ 
+/**https://i.pinimg.com/originals/3b/39/1a/3b391aa210e495ac1c5a10fc9dcc1568.jpg**/ 
+/**https://previews.123rf.com/images/jozefklopacka/jozefklopacka1604/jozefklopacka160400020/54742015-vieja-nota-de-la-m%C3%BAsica-y-el-efecto-de-la-vendimia-fondo-musical.jpg**/  /**https://setersjenten.files.wordpress.com/2012/06/shtmsc002.jpg**/
+  /**https://www.kindpng.com/picc/m/467-4670459_see-you-again-klaviernoten-hd-png-download.png**/
+  /**https://c1.wallpaperflare.com/preview/594/292/847/music-notenblatt-black-white.jpg**/ url(https://lh3.googleusercontent.com/BFOnFs0iLhXxYtKbMRIjShKpHpGs4kHAR9t7kswKtKMAYnIiyiWZtva8KF7QpcMjSMnsv3pOKDASk8OdJZ0MMRKQzD23fW-NJYeCJ6z-mgvztpoEgzduUn7xuBIiB7ZnKFuxpYQ80RReq6p38fOr1l3YdgPkjbpkPULTPvkeTPHonk5Mk-CeXp_ZajgQJKMxgnFYqAUYLg2CLa9tPsfL9PyppOi9sX3D_QJcb-EDeGyUExvSIQC7CfZfPVwcmGk7559fe7pLkTUjjnYI_dwEIlvqp2YkDUBsMf1FsCbN7bVDtLfKA7-Awxw7tYWskRIK3lQX0kn1_hFAT58LFZxLsUr8EB9qGsbzkk6J80daradA2Kt5zI2w-yJ1z45UKLKiojtDPBV3cPxd9QSwZqKXkBBbRasppc7GIDtushvQKEg5CNpL6JCfucDQTkwiPZnLkHbDgZ5aAZhd2NWxPjIkldiUXkF67TFJ50Ez5Jzxx3igp1t0YCW8kDelvrn6_MJbUyu_t6wqLYxgQspnCik5Uaqeb4A-fDDZgfTDpgmHqBd6XbvuBBh-0ahoRiez5xPmWI6ehCewOeY6xV1rhrMIbsXXAt6ajcWFSWBxqod_xYlg8DyN2tfOHUsgqOBMOH9erLSOp2gGXEK6z6NqPqNCUzq0LvHp_GH_7HnluxAIUfBa82Fj2Cx1vl3gHBh6guRoSdNycKEutvu5HwrHSCAQtaHpty_ASw8U7Ey7bMbDIE0QYiRZLd21zwZjjUJg2J8xxKVdIGCbGBE1fHS2HPQ0hblOaFpVs_CYB20Q=s880-no?authuser=0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 650px) {
+  body {
+  background-image: linear-gradient(60deg, #eee 0%, #eee 100%);
+}
+}
+/** 
+#f1f2f6	(241,242,246)
+#555555	(85,85,85)
+#0e3768	(14,55,104)
+#b0d8e3	(176,216,227)
+#efe897	(239,232,151)
+**/
+
+#page-wrapper {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #ff5757;
+  text-shadow: 0.5px 0.5px 0.75px #1f1f1f;
+  text-decoration: none;
+  transition: 0.3s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+}
+
+a > h2 {
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+}
+
+a:hover {
+  color: #d44646; 
+}
+
+/** global classes styling **/
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 6px 0 10px -10px black, -6px 0 10px -10px black;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+.grid {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+      -webkit-box-shadow: 0 0px 0px -0px black;
+	   -moz-box-shadow: 0 0px 0px -0px black;
+	        box-shadow: 0 0px 0px -0px black;
+  }
+}
+
+.logo {
+  width: 60vw;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+
+nav {
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 0px;
+    padding-bottom: 10px;
+  }
+  .nav-link {
+    padding-bottom: 5px;
+    padding: 2px;
+    border-radius: 7px;
+  }
+}
+
+.nav-list {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #ff5757;
+}
+
+@media (max-width: 650px) {
+  .nav-list {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+.nav-div{
+  display: flex;
+  justify-content: space-around; 
+  width: 100%;
+}
+
+.nav-link {
+  transition: 0.2s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+}
+/*
+.nav-link:hover {
+  color: #d44646;   
+}*/
+
+.nav-link:active {
+  font-size: 95%;
+}
+
+@media (max-width: 650px){
+  .nav-link:active {
+  font-size: 85%;
+}
+}
+
+/** über uns **/
+
+
+#bildvonuns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /** height: 300px; **/
+  margin-top: 50px;
+}
+
+#ueber-uns-img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: /**0 9px 0px 0px #eee, 0 -0px 0px 0px #f0f1f5,**/ 6px 0 10px -10px black, -6px 0 10px -10px black;
+  
+}
+
+@media (max-width: 650px) {
+  #bildvonuns {
+    margin-top: 80px;
+    background-color: white;
+  }
+}
+
+#about {
+  padding-top: 30px;
+  background: #eee;
+}
+
+#about .grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (max-width: 650px) {
+#about .grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+}
+
+.brsmall {
+            display: block;
+            margin-bottom: .5em;
+        }
+.brverysmall {
+            display: block;
+            margin-bottom: 30px;
+        }
+
+/**#about .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: darkorange;
+}
+
+@media (max-width: 550px) {
+  #about .icon {
+    display: none;
+  }
+}**/
+
+#about .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 80vw;
+  padding: 10px;
+}
+
+@media (max-width: 550px) {
+  #about .desc {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+  }
+}
+/*
+@media (max-width: 650px) {
+  #about {
+    padding-top: 30px;
+  }
+}*/
+
+#but:hover {
+  background-color: #d44646; 
+}
+
+#but {
+  color: white;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.2s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+  padding: 5px;
+  border-radius: 14px;
+  background-color: #ff5757;
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+  font-size: 1.5rem;
+  height: calc(100% / 1);
+}
+
+#but:active {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 650px){
+  #but {
+  font-size: 1.1rem;
+  border-radius: 7px;
+}
+}
+
+@media (max-width: 650px){
+  #but:active {
+  font-size: 1rem;
+}
+}
+
+/**#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#how-it-works > iframe {
+  max-width: 560px;
+  width: 100%;
+}**/
+
+#wowann {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #eee;
+}
+
+@media (max-width: 650px)
+  #about{
+  background: white;
+}
+
+.kachel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 0.66);
+  margin: 10px;
+}
+
+/**Einschub**/
+
+#wo {
+  border: 0px;
+}
+
+#wo > iframe {
+  max-width: 600px;
+  width: 100%;
+}
+
+#wann {
+  max-width: 560px;
+  width: 100%;
+  background-color: #eee;
+  border: 5px solid #ddd /**#555555**/;
+  border-radius: 7px;
+  box-shadow: 6px 6px 10px -10px black, -6px 6px 10px -10px black;
+}
+/**Einschub ende**/
+
+.kachel > .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 70;
+  font-size: 1.5rem;
+}
+
+.kachel > h2 {
+  margin-top: 20px;
+}
+
+.kachel > ol {
+  margin: 15px 0;
+}
+
+.kachel > ol > li {
+  padding: 5px 0;
+}
+
+@media (max-width: 800px) {
+  #wowann {
+    flex-direction: column;
+  }
+  #wo {
+    max-width: 600px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 0px solid #555555;
+  }
+  #wann {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+     margin-top: 20px;
+  }
+ 
+  .kachel > .level {
+  color: black;
+  padding: 10px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 70;
+  font-size: 1.5rem;
+}
+
+.kachel > h2 {
+  margin-top: 10px;
+}
+
+.kachel > ol {
+  margin: 5px 0;
+}
+
+.kachel > ol > li {
+  padding: 5px 0;
+}
+}
+
+/* Contact section */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background: #eee;
+}
+
+@media (max-width: 650px)
+  #contact{
+  background: white;
+}
+
+.contact-section-header > h2 {
+   font-size: 2rem; 
+  }
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 1.5rem; 
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+
+}
+
+#details {
+  font-size: 1.5rem;
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+  transition: 0.8s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+  border: transparent;
+  color: #ff5757;
+}
+
+#details:active {
+  color: #d44646; 
+ /* font-size: 90%;*/
+}
+/**
+.contact-details:hover {
+  font-size: 1.6rem;
+}
+**/
+
+@media (max-width: 700px) {
+  #details {
+  font-size: 1.2rem;
+  text-shadow: 1.5px 1.5px 1px #1f1f1f;
+  transition: 0.8s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6)/*cubic-bezier(.44,.44,.21,1.23)*/;
+  border: transparent;
+  color: #ff5757;
+  }
+  /*
+  #details:active {
+  color: #d44646; 
+  font-size: 90%;
+  }*/
+}
+
+footer {
+  margin-top: 0px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.footer-links {
+  font-size: 100%;
+  transition: 0.1s ease;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+}
+
+.footer-links:active {
+  color: #d44646; 
+  font-size: 95%;
+}
+
+</style>
+
+<body>
+<!-- partial:index.partial.html -->
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
+<div id="page-wrapper">
+  <header id="header">
+    <div class="logo">
+      <img
+        id="header-img"
+        src="https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/DaCapoStotel.png?raw=true"
+        alt="DaCapo"
+      >
+    </div>
+    <nav id="nav-bar">
+      <div class="nav-list">
+        <div class="nav-div"><a id="nav1" class="nav-link" href="#about">&nbspÜber uns&nbsp</a></div>
+        <div class="nav-div"><a id="nav2" class="nav-link" href="#wowann">&nbspWo & Wann&nbsp</a></div>
+        <div class="nav-div"><a id="nav3" class="nav-link" href="#contact">&nbspKontakt&nbsp</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="containerino" class="container" style="width: 100%; height: 1px;" ></div>
+
+  <section id="bildvonuns">
+    <img id="ueber-uns-img"
+         src="https://as2.ftcdn.net/v2/jpg/02/06/34/21/1000_F_206342197_J6wwIZyQb3d21AvcRYQP4B5BLB9dGecP.jpg"
+         >
+  </section>
+
+  <div class="container">
+    <section id="about">
+      <div class="grid">
+        <div class="desc">
+          <h2>{{ .Title }}</h2>
+          <span class="brverysmall"></span>
+          <p>
+            Mit 17 Titel geladen Frauen- und 4 Männerstimmen singen wir überwiegend dreistimmige Chorsätze a-capella (ohne Instrumentenbegleitung)
+            <span class="brsmall"></span>
+
+Für einen schönen homogenen Chorklang ist Stimmbildung am Anfang der Probe, durch unsere Chorleiterin Bettina C. Flach, eine wichtige Aufwärmübung für unsere Stimmen und Körper.
+      <span class="brsmall"></span>
+
+Mit viel Energie, Humor und Geduld geht es dann an die Chorstücke, die wir in Deutsch, Plattdeutsch und Englisch singen.</br>Wir singen mit großer Freude unter anderem auch Popstücke.<span class="brsmall"></span>
+
+Chorprobe haben wir jeden Dienstag von 19:30 bis 21:00 Uhr im Kulturzentrum Alte Schule in Stotel, Fleester Str. 2, 27612 Loxstedt.
+          </p>
+        </div>
+      </div>
+  <div class="grid" style="display: flex; justify-content: center; align-items: center; align-text: center; margin-top: 40px;">
+         <a href="https://dacapostotel.github.io/dacapo-stotel.github.io/Veranstaltungen/veranstaltungenindex.html">
+           <div id="but">Aktuelles &</br>Veranstaltungen</div></a>
+    </div>
+    </section>
+    <section id="wowann">
+      
+         <div class="kachel" id="wo">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196.337020474601!2d8.597200440432538!3d53.447902728079434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b6b5a5220642bd%3A0x9ebed421b0cd453b!2sKulturzentrum%20Alte%20Schule!5e0!3m2!1sde!2sde!4v1649876594853!5m2!1sde!2sde" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      
+      <div class="kachel" id="wann">
+        <div class="level">Singen</div>
+        <h2>wöch. Dienstag</h2>
+        <ol>
+          <li>19:30 Uhr - 21:00 Uhr</li>
+          <li>Kulturzentrum Alte Schule<br/>
+          Fleester Str. 2, 27612 Loxstedt</li>
+        </ol>
+      </div>
+    </section>
+    
+    <!-- START CONTACT SECTION -->
+
+<section id="contact" class="contact-section">
+  <div class="contact-section-header">
+    <h2>Kontakt - Bettina C. Flach</h2>
+  </div>
+ 
+    <div class="contact-section-header">
+    <p>Schau gern vorbei. Du erreichst uns hier:</p>
+  </div>
+  <div class="contact-links">
+    <a href="mailto:example@example.com" id="details" class="btn contact-details"
+      >dacapo.stotel@gmail.com</a>
+  </div>
+</section>
+
+<!-- END CONTACT SECTION -->
+    
+    <footer>
+      <ul>
+        <li><a class"footer-links" href="https://dacapostotel.github.io/dacapo-stotel.github.io/#about">Über uns</a></li>
+        <li><a class"footer-links" href="https://dacapostotel.github.io/dacapo-stotel.github.io/#wowann">Wo & Wann</a></li>
+        <li><a class"footer-links" href="https://dacapostotel.github.io/dacapo-stotel.github.io/#contact">Kontakt</a></li>
+      </ul>
+      <span>Made by Paul Dammann</span>
+    </footer>
+  </div>
+</div>
+<!-- partial -->
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+  <script>
+  var scroll = this.pageYOffset || document.documentElement.scrollTop;
+  var wrapper = document.getElementById('page-wrapper'); 
+  var dynamic = document.getElementById('nav-bar');
+  var height = wrapper.offsetHeight;
+
+window.addEventListener('scroll', function(){
+  var scroll = this.pageYOffset || document.documentElement.scrollTop;
+  var showPoint = this.innerHeight/8;
+	/*
+	if (scroll <= 0) {
+    nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  }  */
+ /* 
+  if(scroll > 0 && scroll < 800) {
+    nav1.style.color = "white";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  } else if (scroll <= 0) {
+    nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  }  
+  else if (scroll > 800 && scroll < 1200) {
+    nav1.style.color = "#ff5757";
+    nav2.style.color = "white";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "#ff5757";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  } 
+  else if (scroll > 1200 && scroll < 1500) {
+    nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "white";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "rgba(255,87,87,1)";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  }
+*/
+      const mediaQuery = window.matchMedia('(max-width: 650px)')
+
+if(mediaQuery.matches && scroll <= 0) {
+  header.style.webkitBoxShadow = '0 0px 0px -0px black';
+	header.style.mozBoxShadow = '0 0px 0px -0px black';
+	header.style.boxShadow = '0 0px 0px -0px black';
+  header.style.transition = '0.3s ease-out';
+}
+else if (mediaQuery.matches && scroll > 0) {
+  header.style.webkitBoxShadow = '0 6px 8px -7px black';
+	header.style.mozBoxShadow = '0 6px 8px -7px black';
+	header.style.boxShadow = '0 6px 8px -7px black';
+  header.style.transition = '1s ease-out';
+}       
+
+  
+  
+if (mediaQuery.matches && scroll > 1200) {
+  details.style.fontSize = '1.3rem';
+}
+else if (mediaQuery.matches && scroll < 1200) {
+  details.style.fontSize = '1.1rem';
+  }  
+else if (scroll > 1050) {
+  details.style.fontSize = '1.8rem';
+}    
+else if (scroll < 1050) {
+  details.style.fontSize = '1.4rem';
+}
+
+  
+                       
+});
+
+
+
+
+var observer9 = new IntersectionObserver(function(entries) {
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+  if (mediaQuery.matches && entries[0].isIntersecting === true){
+		nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  }
+}, { threshold: [1] });
+
+observer9.observe(document.querySelector("#bildvonuns"));
+/*
+var observer0 = new IntersectionObserver(function(entries) {
+	if(mediaQuery.matches && entries[0].isIntersecting === true){
+		    nav1.style.color = "white";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  }
+}, { threshold: [0.7] });
+
+observer0.observe(document.querySelector("#bildvonuns"));
+*/
+var observer1 = new IntersectionObserver(function(entries) {
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+	if(mediaQuery.matches && entries[0].isIntersecting === true){
+		nav1.style.color = "white";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  }
+}, { threshold: [0.7] });
+
+observer1.observe(document.querySelector("#about"));
+
+
+var observer2 = new IntersectionObserver(function(entries) {
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+	if(mediaQuery.matches && entries[0].isIntersecting === true){
+		    nav1.style.color = "#ff5757";
+    nav2.style.color = "white";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "#ff5757";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+    /*details.style.fontSize = '1.1rem';*/
+  }
+}, { threshold: [0.5] });
+
+observer2.observe(document.querySelector("#wowann"));
+
+/*
+var observer8 = new IntersectionObserver(function(entries) {
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+	if(entries[0].isIntersecting === true){
+    details.style.fontSize = '1.4rem';
+  }
+}, { threshold: [0.5] });
+
+observer8.observe(document.querySelector("#wowann"));
+*/
+
+var observer3 = new IntersectionObserver(function(entries) {
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+	if(mediaQuery.matches && entries[0].isIntersecting === true){
+		    nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "white";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "#ff5757";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+  }
+}, { threshold: [0.5] });
+
+
+observer3.observe(document.querySelector("#contact"));
+
+
+/*
+var observer4 = new IntersectionObserver(function(entries) {
+  
+  const mediaQuery = window.matchMedia('(max-width: 650px)')
+  
+	if(mediaQuery.matches && entries[0].isIntersecting === true){
+		details.style.fontSize = '1.3rem';
+  }
+  else if (entries[0].isIntersecting === true){
+		details.style.fontSize = '1.4rem';
+  }
+}, { threshold: [0.5] });
+
+
+observer4.observe(document.querySelector("#details"));*/
+
+/*
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#containerino');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top <= 0 && position.bottom <= window.innerHeight) {
+		    nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#bildvonuns');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(scroll > 0 && position.top < window.innerHeight && position.bottom >= 0) {
+		    nav1.style.color = "white";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#about');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+		    nav1.style.color = "white";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#wowann');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+		    nav1.style.color = "#ff5757";
+    nav2.style.color = "white";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "#ff5757";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#contact');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+		    nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "white";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "#ff5757";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+*/
+
+
+
+
+
+/*
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#containerino');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+		    nav1.style.color = "#ff5757";
+    nav2.style.color = "#ff5757";
+    nav3.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav2.style.backgroundColor = "white";
+    nav3.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav2.style.transition = '0.8s ease-out';
+    nav3.style.transition = '0.8s ease-out';
+	}
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#bildvonuns');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(scroll > 0 && position.top < window.innerHeight && position.bottom >= 0) {
+    nav1.style.color = "white";
+    nav1.style.backgroundColor = "#ff5757";
+    nav1.style.transition = '0.8s ease-out';
+	}
+  else {
+    nav1.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';    
+  }
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#about');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+    nav2.style.color = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav2.style.transition = '0.8s ease-out'; 
+    nav3.style.color = "#ff5757";
+    nav3.style.backgroundColor = "white";
+    nav3.style.transition = '0.8s ease-out'; 
+	}
+  
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+    nav1.style.color = "white";
+    nav1.style.backgroundColor = "#ff5757";
+    nav1.style.transition = '0.8s ease-out';
+	}
+  else {
+    nav1.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';    
+  }
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#wowann');
+	var position = element.getBoundingClientRect();
+
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+    nav1.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out';
+    nav3.style.color = "#ff5757";
+    nav3.style.backgroundColor = "white";
+    nav3.style.transition = '0.8s ease-out'; 
+	}
+  
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+    nav2.style.color = "white";
+    nav2.style.backgroundColor = "#ff5757";
+    nav2.style.transition = '0.8s ease-out';
+	}
+  else {
+    nav2.style.color = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav2.style.transition = '0.8s ease-out';    
+  }
+
+});
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#contact');
+	var position = element.getBoundingClientRect();
+
+	// checking whether fully visible
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+    nav2.style.color = "#ff5757";
+    nav2.style.backgroundColor = "white";
+    nav2.style.transition = '0.8s ease-out'; 
+    nav1.style.color = "#ff5757";
+    nav1.style.backgroundColor = "white";
+    nav1.style.transition = '0.8s ease-out'; 
+	}
+  
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+    nav3.style.color = "white";
+    nav3.style.backgroundColor = "#ff5757";
+    nav3.style.transition = '0.8s ease-out';
+	}
+  else {
+    nav3.style.color = "#ff5757";
+    nav3.style.backgroundColor = "white";
+    nav3.style.transition = '0.8s ease-out';    
+  }
+
+});
+
+*/
+
+</script>
+
+</body>
+</html>
+{{ end }}
