@@ -6,17 +6,7 @@ export default class PostPreview extends React.Component {
     const {entry, widgetFor, getAsset} = this.props;
     let image = getAsset(entry.getIn(["data", "image"]));
 
-    return <html lang="de" >
-
-<head>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Da Capo</title>
-
-</head>
-
-<style>
+    return <style>
 /** global element styling **/
 
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
