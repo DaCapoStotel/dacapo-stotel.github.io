@@ -215,6 +215,7 @@ nav {
   text-align: center;
   /** height: 300px; **/
   margin-top: 50px;
+  max-width: 100%;
 }
 
 #ueber-uns-img {
