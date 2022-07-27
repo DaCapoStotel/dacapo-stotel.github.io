@@ -223,7 +223,7 @@ nav {
   box-shadow: /**0 9px 0px 0px #eee, 0 -0px 0px 0px #f0f1f5,**/ 6px 0 10px -10px black, -6px 0 10px -10px black;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
 #ueber-uns-img {
   max-width: 100%;
   }
