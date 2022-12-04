@@ -33,9 +33,22 @@
 
   <div class="container">
   <section id="bildvonuns">
-    <img id="ueber-uns-img"
-         src="https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/AdobeStock_206342197.jpeg?raw=true"
-         >
+    <?php
+date_default_timezone_set('Europe/London'); // Change this depending on what timezone your in
+
+$today = strtotime(date('Y-m-d'));
+$start = strtotime(date('Y') . '-11-25');
+$end = strtotime(date('Y') . '-01-05');
+
+if($today >= $start && $today <= $end) { ?>
+<img src="https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/AdobeStock_232974705.jpeg?raw=true" />
+<?php
+}
+else { ?>
+<img src="https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/AdobeStock_206342197.jpeg?raw=true" />
+<?php
+}
+?>
   </section>
 
   
