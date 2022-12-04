@@ -35,7 +35,7 @@
     
     <script>
       
-      // Manage core logic by this variable
+// Manage core logic by this variable
 var Settlement = [];
 Settlement.strtotime = function(text, now)
 {
@@ -353,11 +353,9 @@ Settlement.strtotime = function(text, now)
 //----------------------------
 
 date_default_timezone_set('Europe/London');
-// Change this depending on what timezone your in
 today = Settlement.strtotime(date('Y-m-d'));
 start = Settlement.strtotime(date('Y')+'-11-25');
-end = Settlement.strtotime(date('Y')+'-12-29');
-if (today >= start && today <= end) {
+if (today >= start) {
     ?>
 <img id="ueber-uns-img" src="https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/AdobeStock_232974705.jpeg?raw=true" />
 <?php 
