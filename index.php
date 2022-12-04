@@ -41,10 +41,10 @@ $start = strtotime(date('Y') . '-11-25');
 $end = strtotime(date('Y') . '-12-29');
 
 if ($today >= $start && $today <= $end) { ?>
-<!-- <img src="https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/AdobeStock_232974705.jpeg?raw=true" style="
+<img src="https://github.com/DaCapoStotel/dacapo-stotel.github.io/blob/main/assets/AdobeStock_232974705.jpeg?raw=true" style="
   max-width: 1000px;
   max-width: 100%;
-  box-shadow: /**0 9px 0px 0px #eee, 0 -0px 0px 0px #f0f1f5,**/ 6px 0 10px -10px black, -6px 0 10px -10px black;" /> -->
+  box-shadow: /**0 9px 0px 0px #eee, 0 -0px 0px 0px #f0f1f5,**/ 6px 0 10px -10px black, -6px 0 10px -10px black;" />
 <?php
 }
 else { ?>
