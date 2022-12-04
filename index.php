@@ -1,3 +1,4 @@
+<?php
 <html lang="de" >
 <head>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -143,3 +144,4 @@ Chorprobe haben wir jeden Dienstag von 19:30 bis 21:00 Uhr im Kulturzentrum Alte
 
 </body>
 </html>
+?>
