@@ -291,7 +291,6 @@ nav {
 
 #about .desc > p {
   text-align: justify;
-  text-align-last: none;
 }
 
 @media (max-width: 550px) {
