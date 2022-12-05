@@ -289,9 +289,11 @@ nav {
   padding: 10px;
 }
 
+/*
 #about .desc > p {
   text-align: justify;
 }
+*/
 
 @media (max-width: 550px) {
   #about .desc {
