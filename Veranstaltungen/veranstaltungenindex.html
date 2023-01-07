@@ -221,8 +221,21 @@ document.write('<li>20.12.2022: Auftritt lebendiger Adventskalender, Alte Schule
         window.location.reload();
       } else {
         // If the login is unsuccessful, display an error message
-        alert('Invalid username or password');
-}
+        alert('Invalid username or password')  
+      };
+  xhr.send(formData);
+});
+
+// Log the user out when the logout button is clicked
+logoutButton.addEventListener('click', () => {
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', '/logout');
+  xhr.onload = () => {
+    // Refresh the page after logging out
+    window.location.reload();
+  };
+  xhr.send();
+});
         </script>
 <-- END LOGIN -->
       
