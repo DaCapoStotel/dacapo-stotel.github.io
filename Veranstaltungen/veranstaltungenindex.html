@@ -40,63 +40,7 @@
       <li>20.12.2022: Auftritt lebendiger Adventskalender, Alte Schule Stotel, 19:00 Uhr</li>
       
   <!-- START EDITABLE TEXT -->
-      <!-- Login Form -->
-<form id="login-form">
-  <label for="username">Username:</label><br>
-  <input type="text" id="username" name="username"><br>
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password"><br><br>
-  <button type="submit">Log In</button>
-</form> 
-
-<!-- Text Editing UI -->
-<div id="text-editor">
-  <textarea id="text-input"></textarea>
-  <button id="save-button">Save</button>
-</div>
-      
-      <script>
-        // Form Submission
-
-// Select the login form
-const loginForm = document.querySelector('#login-form');
-
-// Listen for the submit event on the login form
-loginForm.addEventListener('submit', (event) => {
-  // Prevent the default form submission behavior
-  event.preventDefault();
-
-  // Get the values of the username and password fields
-  const username = event.target.elements.username.value;
-  const password = event.target.elements.password.value;
-
-  // Log the username and password values
-  console.log(`Username: ${username}`);
-  console.log(`Password: ${password}`);
-
-  // Clear the form fields
-  event.target.elements.username.value = '';
-  event.target.elements.password.value = '';
-});
-
-// Button Click
-
-// Select the save button
-const saveButton = document.querySelector('#save-button');
-
-// Listen for the click event on the save button
-saveButton.addEventListener('click', () => {
-  // Get the value of the text input field
-  const textInput = document.querySelector('#text-input');
-  const text = textInput.value;
-
-  // Log the value of the text input field
-  console.log(text);
-
-  // Clear the text input field
-  textInput.value = '';
-});
-      </script>
+     
       
       <!-- END EDITABLE TEXT -->
       
