@@ -170,6 +170,62 @@ document.write('<li>20.12.2022: Auftritt lebendiger Adventskalender, Alte Schule
         <li><a class"footer-links" href="https://dacapostotel.github.io/dacapo-stotel.github.io/#contact">Kontakt</a></li>
       </ul>
       <span></span>
+      
+      <-- START LOGIN -->
+<form id="login-form">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+  <button type="submit">Log in</button>
+</form>
+
+<div id="editing-ui" style="display: none;">
+  <!-- Editing UI goes here -->
+</div>
+
+<button id="logout-button" style="display: none;">Log out</button>
+
+<script>
+  const loginForm = document.getElementById('login-form');
+  const editingUI = document.getElementById('editing-ui');
+  const logoutButton = document.getElementById('logout-button');
+
+  // Check the logged-in status of the user when the page loads
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', '/logged-in');
+  xhr.onload = () => {
+    if (xhr.responseText === 'true') {
+      // If the user is logged in, show the editing UI and logout button
+      loginForm.style.display = 'none';
+      editingUI.style.display = 'block';
+      logoutButton.style.display = 'block';
+    } else {
+      // If the user is not logged in, show the login form
+      loginForm.style.display = 'block';
+      editingUI.style.display = 'none';
+      logoutButton.style.display = 'none';
+    }
+  };
+  xhr.send();
+
+  // Log the user in when the login form is submitted
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(loginForm);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/login');
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        // If the login is successful, refresh the page
+        window.location.reload();
+      } else {
+        // If the login is unsuccessful, display an error message
+        alert('Invalid username or password');
+}
+        </script>
+<-- END LOGIN -->
+      
     </footer>
   </div>
 </div>
