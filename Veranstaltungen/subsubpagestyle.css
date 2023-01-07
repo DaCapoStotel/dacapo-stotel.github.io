@@ -402,9 +402,10 @@ footer {
   background-color: #ddd;
   padding: 20px;
 
-  display: flex;
-  flex-direction: column;
-  min-height: 5px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 footer > ul {
