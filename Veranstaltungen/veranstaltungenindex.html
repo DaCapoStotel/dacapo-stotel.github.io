@@ -148,6 +148,7 @@ document.write('<li>20.12.2022: Auftritt lebendiger Adventskalender, Alte Schule
       <span></span>
       
       <!-- START LOGIN -->
+<!-- Login form -->
 <form id="login-form">
   <label for="username">Username:</label>
   <input type="text" id="username" name="username">
@@ -156,44 +157,41 @@ document.write('<li>20.12.2022: Auftritt lebendiger Adventskalender, Alte Schule
   <button type="submit">Log in</button>
 </form>
 
+<!-- Editing UI -->
 <div id="editing-ui" style="display: none;">
-  <!-- Editing UI goes here -->
-  <input type="text" id="editor">
-<button id="save-button">Save</button>
+  <!-- Editable elements go here -->
+  <h1 id="editable-title">This is the title</h1>
+  <p id="editable-paragraph">This is some editable text.</p>
+  <img id="editable-image" src="image.jpg" alt="image">
 
-<script>
-  // Get references to the editable element and the editor field
-  const editable = document.getElementById('editable');
-  const editor = document.getElementById('editor');
-
-  // Update the editor field with the text from the editable element when the page loads
-  editor.value = editable.textContent;
-
-  // Listen for changes to the editor field and update the editable element when the user changes the field
-  editor.addEventListener('input', () => {
-    editable.textContent = editor.value;
-  });
-
-  // Save the changes when the user clicks the save button
-  const saveButton = document.getElementById('save-button');
-  saveButton.addEventListener('click', () => {
-    // Send the updated HTML to the server to be saved
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/save-edits');
-    xhr.send(editable.outerHTML);
-  });
-</script>
-  
-  <!-- END OF Editing UI -->
-  
+  <!-- Editor fields -->
+  <label for="title-editor">Title:</label>
+  <input type="text" id="title-editor">
+  <br>
+  <label for="paragraph-editor">Paragraph:</label>
+  <textarea id="paragraph-editor"></textarea>
+  <br>
+  <label for="image-editor">Image URL:</label>
+  <input type="text" id="image-editor">
+  <br>
+  <button id="save-button">Save</button>
 </div>
 
+<!-- Logout button -->
 <button id="logout-button" style="display: none;">Log out</button>
 
 <script>
+  // Get references to the form, editable elements, and editor fields
   const loginForm = document.getElementById('login-form');
   const editingUI = document.getElementById('editing-ui');
   const logoutButton = document.getElementById('logout-button');
+  const editableTitle = document.getElementById('editable-title');
+  const editableParagraph = document.getElementById('editable-paragraph');
+  const editableImage = document.getElementById('editable-image');
+  const titleEditor = document.getElementById('title-editor');
+  const paragraphEditor = document.getElementById('paragraph-editor');
+  const imageEditor = document.getElementById('image-editor');
+  const saveButton = document.getElementById('save-button');
 
   // Check the logged-in status of the user when the page loads
   const xhr = new XMLHttpRequest();
@@ -204,15 +202,19 @@ document.write('<li>20.12.2022: Auftritt lebendiger Adventskalender, Alte Schule
       loginForm.style.display = 'none';
       editingUI.style.display = 'block';
       logoutButton.style.display = 'block';
+
+      // Update the editor fields with the text from the editable elements
+      titleEditor.value = editableTitle.textContent;
+      paragraphEditor.value = editableParagraph.textContent;
+      imageEditor.value = editableImage.src;
     } else {
       // If the user is not logged in, show the login form
       loginForm.style.display = 'block';
-      editingUI.style.display = 'none';
-      logoutButton.style.display = 'none';
-    }
-  };
+  	editingUI.style.display = 'none';
+  	logoutButton.style.display = 'none';
+};
   xhr.send();
-
+});
   // Log the user in when the login form is submitted
   loginForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -225,22 +227,36 @@ document.write('<li>20.12.2022: Auftritt lebendiger Adventskalender, Alte Schule
         window.location.reload();
       } else {
         // If the login is unsuccessful, display an error message
-        alert('Invalid username or password');  
-      };
-  xhr.send(formData);
-});
+        alert('Invalid username or password');
+      }
+    };
+    xhr.send(formData);
+  });
 
-// Log the user out when the logout button is clicked
-logoutButton.addEventListener('click', () => {
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', '/logout');
-  xhr.onload = () => {
-    // Refresh the page after logging out
-    window.location.reload();
-  };
-  xhr.send();
-});
-        </script>
+  // Log the user out when the logout button is clicked
+  logoutButton.addEventListener('click', () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/logout');
+    xhr.onload = () => {
+      // Refresh the page after logging out
+      window.location.reload();
+    };
+    xhr.send();
+  });
+
+  // Save the changes when the user clicks the save button
+  saveButton.addEventListener('click', () => {
+    // Update the editable elements with the text from the editor fields
+    editableTitle.textContent = titleEditor.value;
+    editableParagraph.textContent = paragraphEditor.value;
+    editableImage.src = imageEditor.value;
+
+    // Send the updated HTML to the server to be saved
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/save-edits');
+    xhr.send(document.body.innerHTML);
+  });
+</script>
 <!-- END LOGIN -->
       
     </footer>
