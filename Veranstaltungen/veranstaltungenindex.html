@@ -68,6 +68,7 @@
 </script>
       
       <!-- Login form -->
+<!-- Login form -->
 <form id="login-form">
   <label for="username">Username:</label>
   <input type="text" id="username" name="username">
@@ -78,103 +79,52 @@
 
 <!-- Editing UI -->
 <div id="editing-ui" style="display: none;">
-  <!-- Editable elements go here -->
-  <h1 id="editable-title">This is the title</h1>
-  <p id="editable-paragraph">This is some editable text.</p>
-  <img id="editable-image" src="image.jpg" alt="image">
+  <!-- Editable element -->
+  <div id="editable-content">
+    <h1>This is the title</h1>
+    <p>This is some editable text.</p>
+  </div>
 
-  <!-- Editor fields -->
-  <label for="title-editor">Title:</label>
-  <input type="text" id="title-editor">
-  <br>
-  <label for="paragraph-editor">Paragraph:</label>
-  <textarea id="paragraph-editor"></textarea>
-  <br>
-  <label for="image-editor">Image URL:</label>
-  <input type="text" id="image-editor">
-  <br>
+  <!-- CKEditor instance -->
+  <textarea id="editor"></textarea>
   <button id="save-button">Save</button>
 </div>
 
 <!-- Logout button -->
 <button id="logout-button" style="display: none;">Log out</button>
 
+<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 <script>
-  // Get references to the form, editable elements, and editor fields
+  // Get references to the form, editable element, and buttons
   const loginForm = document.getElementById('login-form');
   const editingUI = document.getElementById('editing-ui');
   const logoutButton = document.getElementById('logout-button');
-  const editableTitle = document.getElementById('editable-title');
-  const editableParagraph = document.getElementById('editable-paragraph');
-  const editableImage = document.getElementById('editable-image');
-  const titleEditor = document.getElementById('title-editor');
-  const paragraphEditor = document.getElementById('paragraph-editor');
-  const imageEditor = document.getElementById('image-editor');
+  const editableContent = document.getElementById('editable-content');
   const saveButton = document.getElementById('save-button');
+  xhr.send(formData);
+});
 
-  // Check the logged-in status of the user when the page loads
+// Log the user out when the logout button is clicked
+logoutButton.addEventListener('click', () => {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', '/logged-in');
+  xhr.open('POST', '/logout');
   xhr.onload = () => {
-    if (xhr.responseText === 'true') {
-      // If the user is logged in, show the editing UI and logout button
-      loginForm.style.display = 'none';
-      editingUI.style.display = 'block';
-      logoutButton.style.display = 'block';
-
-      // Update the editor fields with the text from the editable elements
-      titleEditor.value = editableTitle.textContent;
-      paragraphEditor.value = editableParagraph.textContent;
-      imageEditor.value = editableImage.src;
-    } else {
-      // If the user is not logged in, show the login form
-      loginForm.style.display = 'block';
-  	editingUI.style.display = 'none';
-  	logoutButton.style.display = 'none';
-};
+    // Refresh the page after logging out
+    window.location.reload();
+  };
   xhr.send();
 });
-  // Log the user in when the login form is submitted
-  loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const formData = new FormData(loginForm);
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/login');
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        // If the login is successful, refresh the page
-        window.location.reload();
-      } else {
-        // If the login is unsuccessful, display an error message
-        alert('Invalid username or password');
-      }
-    };
-    xhr.send(formData);
-  });
 
-  // Log the user out when the logout button is clicked
-  logoutButton.addEventListener('click', () => {
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/logout');
-    xhr.onload = () => {
-      // Refresh the page after logging out
-      window.location.reload();
-    };
-    xhr.send();
-  });
+// Save the changes when the user clicks the save button
+saveButton.addEventListener('click', () => {
+  // Update the editable element with the content from the CKEditor instance
+  editableContent.innerHTML = CKEDITOR.instances.editor.getData();
 
-  // Save the changes when the user clicks the save button
-  saveButton.addEventListener('click', () => {
-    // Update the editable elements with the text from the editor fields
-    editableTitle.textContent = titleEditor.value;
-    editableParagraph.textContent = paragraphEditor.value;
-    editableImage.src = imageEditor.value;
-
-    // Send the updated HTML to the server to be saved
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/save-edits');
-    xhr.send(document.body.innerHTML);
-  });
+  // Send the updated HTML to the server to be saved
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', '/save-edits');
+  xhr.send(editableContent.innerHTML);
+});
 </script>
       
       <!-- END EDITABLE TEXT -->
