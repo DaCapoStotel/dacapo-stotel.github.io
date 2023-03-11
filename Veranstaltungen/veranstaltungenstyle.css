@@ -216,6 +216,12 @@ nav > ul {
 }
 
 @media (max-width: 650px) {
+#aktuelles > div > ul > li {
+  margin: 3px;
+}
+}
+
+@media (max-width: 650px) {
   #aktuelles > div > ul {
   }
 }
