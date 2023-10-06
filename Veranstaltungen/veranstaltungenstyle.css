@@ -235,6 +235,15 @@ nav > ul {
 /* END AKTUELLES SECTION */
 /* START VERANSTALTUNGEN SECTION */
 
+.brsmall {
+            display: block;
+            margin-bottom: .5em;
+        }
+.brverysmall {
+            display: block;
+            margin-bottom: .2em;
+        }
+
 #veranstaltungen {
   padding-top: 90px;
   background: #eee;
