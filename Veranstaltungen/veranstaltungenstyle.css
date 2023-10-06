@@ -305,7 +305,7 @@ nav > ul {
 #veranstaltungen .desc {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   width: 80vw;
   padding: 10px;
