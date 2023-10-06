@@ -247,7 +247,7 @@ nav > ul {
 @media (max-width: 650px) {
   .brsmall {
             display: block;
-            margin-bottom: .0em;
+            margin-bottom: 0em;
         }
 }
 
@@ -285,7 +285,7 @@ nav > ul {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: calc(100% / 0.4);
+  width: calc(100% / 0.5);
 }
 
 @media (max-width: 650px) {
@@ -325,7 +325,7 @@ nav > ul {
   height: 100%;
   width: 80vw;
   padding: 10px;
-  width: calc(100% / 0.6);
+  width: calc(100% / 0.5);
 }
 
 #veranstaltungen > a {
