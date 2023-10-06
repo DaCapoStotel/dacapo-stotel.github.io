@@ -237,12 +237,19 @@ nav > ul {
 
 .brsmall {
             display: block;
-            margin-bottom: .5em;
+            margin-bottom: .10em;
         }
 .brverysmall {
             display: block;
             margin-bottom: .2em;
         }
+
+@media (max-width: 650px) {
+  .brsmall {
+            display: block;
+            margin-bottom: .0em;
+        }
+}
 
 #veranstaltungen {
   padding-top: 90px;
