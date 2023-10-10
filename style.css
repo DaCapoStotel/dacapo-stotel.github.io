@@ -107,11 +107,6 @@ header {
 @media (max-width: 650px) {
   header {
     flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 800px) {
-  header {
       -webkit-box-shadow: 0 0px 0px -0px black;
 	   -moz-box-shadow: 0 0px 0px -0px black;
 	        box-shadow: 0 0px 0px -0px black;
