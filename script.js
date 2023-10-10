@@ -77,10 +77,6 @@ else if (mediaQuery.matches && scroll > 0) {
 	header.style.boxShadow = '0 6px 8px -7px black';
   header.style.transition = '1s ease-out';
 }       
-
-});
-
-      const mediaQuery = window.matchMedia('(max-width: 650px)')
   
 if (mediaQuery.matches && scroll > 1200) {
   details.style.fontSize = '1.3rem';
