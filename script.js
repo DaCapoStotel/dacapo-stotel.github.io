@@ -63,7 +63,7 @@ window.addEventListener('scroll', function(){
     nav3.style.transition = '0.8s ease-out';
   }
 */
-      const mediaQuery = window.matchMedia('(max-width: 800px)')
+      const mediaQuery = window.matchMedia('(max-width: 650px)')
 
 if(mediaQuery.matches && scroll <= 0) {
   header.style.webkitBoxShadow = '0 0px 0px -0px black';
