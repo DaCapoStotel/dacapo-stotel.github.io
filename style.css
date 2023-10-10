@@ -104,9 +104,14 @@ header {
 	        box-shadow: 0 8px 6px -6px black;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 650px) {
   header {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
       -webkit-box-shadow: 0 0px 0px -0px black;
 	   -moz-box-shadow: 0 0px 0px -0px black;
 	        box-shadow: 0 0px 0px -0px black;
