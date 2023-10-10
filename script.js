@@ -71,7 +71,7 @@ if(mediaQuery.matches && scroll <= 0) {
 	header.style.boxShadow = '0 0px 0px -0px black';
   header.style.transition = '0.3s ease-out';
 }
-else if (mediaQuery.matches && scroll > 5) {
+else if (mediaQuery.matches && scroll > 0) {
   header.style.webkitBoxShadow = '0 6px 8px -7px black';
 	header.style.mozBoxShadow = '0 6px 8px -7px black';
 	header.style.boxShadow = '0 6px 8px -7px black';
