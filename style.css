@@ -188,6 +188,7 @@ nav {
   transition: 0.2s ease;
   transition-timing-function: ease;
   transition-timing-function: cubic-bezier(.44,.73,.13,1.6);
+  text-align: center;
 }
 /*
 .nav-link:hover {
