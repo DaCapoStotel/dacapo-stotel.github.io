@@ -104,7 +104,7 @@ header {
 	        box-shadow: 0 8px 6px -6px black;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   header {
     flex-wrap: wrap;
       -webkit-box-shadow: 0 0px 0px -0px black;
