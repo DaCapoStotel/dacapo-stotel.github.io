@@ -78,7 +78,9 @@ else if (mediaQuery.matches && scroll > 0) {
   header.style.transition = '1s ease-out';
 }       
 
-  
+});
+
+      const mediaQuery = window.matchMedia('(max-width: 650px)')
   
 if (mediaQuery.matches && scroll > 1200) {
   details.style.fontSize = '1.3rem';
@@ -92,8 +94,6 @@ else if (scroll > 1050) {
 else if (scroll < 1050) {
   details.style.fontSize = '1.4rem';
 }
-
-  
                        
 });
 
