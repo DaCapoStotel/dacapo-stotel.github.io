@@ -1,6 +1,5 @@
 <html lang="de" >
 <head>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Da Capo</title>
@@ -119,18 +118,6 @@ Chorprobe haben wir jeden Dienstag von 19:30 bis 21:00 Uhr im Kulturzentrum Alte
   </div>
 </div>
 <!-- partial -->
-
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 
   <script  src="./script.js"></script>
 
